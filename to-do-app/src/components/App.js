@@ -36,6 +36,12 @@ class App extends Component {
               <ToDo key={index} id={index} name={name} removeToDo={this.handleRemoveToDo}/>
             )}
           </div>
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-3">
+            <h2> Done </h2>
+            {this.state.toDo.map((name,index) =>
+              <ToDo key={index} id={index} name={name} removeToDo={this.handleRemoveToDo}/>
+            )}
+          </div>
         </div>
       </div>
     );
