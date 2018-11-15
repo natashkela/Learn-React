@@ -14,6 +14,15 @@ class App extends Component {
         };
       });
   }
+
+  handleRemoveToDo = (index) => {
+    this.setState( prevState => {
+      return {
+        players: prevState.toDo.splice(index,1)
+      };
+    });
+  }
+
   render() {
     return (
       <div className="container">
@@ -21,9 +30,10 @@ class App extends Component {
           <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <AddToDo addToDo={this.handleAddToDo} />
           </div>
-          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 mt-3">
+          <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 mt-3">
+            <h2> To Do </h2>
             {this.state.toDo.map((name,index) =>
-              <ToDo key={index} name={name}/>
+              <ToDo key={index} id={index} name={name} removeToDo={this.handleRemoveToDo}/>
             )}
           </div>
         </div>
@@ -35,5 +45,8 @@ class App extends Component {
 export default App;
 
 App.propTypes = {
-  addToDo: PropTypes.func
+  addToDo: PropTypes.func,
+  key: PropTypes.number,
+  name: PropTypes.string,
+  removeToDo: PropTypes.func
 };

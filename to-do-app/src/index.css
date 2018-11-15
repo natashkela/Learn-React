@@ -12,3 +12,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.todo{
+  border: 1px solid #bbb;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom:7px;
+}
+
+.remove-icon{
+  margin-right:10px;
+  color:#cc1616;
+  cursor:pointer;
+}
