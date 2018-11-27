@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Navbar from './Navbar.js';
 import Header from './Header.js';
 import AllFeatures from './AllFeatures.js';
+import InviteMeContainer from './InviteMeContainer.js';
 class App extends Component {
 
   state = {
@@ -31,21 +32,7 @@ class App extends Component {
       <Navbar />
       <Header />
       <AllFeatures features={this.state.features}/>
-    <div className="container">
-      <hr/>
-      <div className="row centered">
-        <div className="col-lg-6 col-lg-offset-3">
-          <form className="form-inline" role="form">
-            <div className="form-group">
-              <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter your email address" />
-            </div>
-            <button type="submit" className="btn btn-warning btn-lg">Invite Me!</button>
-          </form>
-        </div>
-        <div className="col-lg-3"></div>
-      </div>
-      <hr/>
-    </div>
+      <InviteMeContainer />
 
     <div className="container">
       <div className="row mt centered">
@@ -79,21 +66,7 @@ class App extends Component {
         </div>
       </div>
     </div>
-    <div className="container">
-      <hr/>
-      <div className="row centered">
-        <div className="col-lg-6 col-lg-offset-3">
-          <form className="form-inline" role="form">
-            <div className="form-group">
-              <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter your email address" />
-            </div>
-            <button type="submit" className="btn btn-warning btn-lg">Invite Me!</button>
-          </form>
-        </div>
-        <div className="col-lg-3"></div>
-      </div>
-      <hr/>
-    </div>
+    <InviteMeContainer />
 
     <div className="container">
       <div className="row mt centered">

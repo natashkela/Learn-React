@@ -1,4 +1,5 @@
 import React from 'react';
+import InviteMe from './InviteMe.js';
 import ipadHand from '../img/ipad-hand.png';
 const Header = () => {
   return (
@@ -8,12 +9,7 @@ const Header = () => {
           <div className="col-lg-6">
             <h1>Make your landing page<br/>
             look really good.</h1>
-            <form className="form-inline" role="form">
-              <div className="form-group">
-                <input type="email" className="form-control" id="exampleInputEmail1" placeholder="Enter your email address" />
-              </div>
-              <button type="submit" className="btn btn-warning btn-lg">Invite Me!</button>
-            </form>
+            <InviteMe />
           </div>
           <div className="col-lg-6">
             <img className="img-responsive" src={ipadHand} alt="" />
