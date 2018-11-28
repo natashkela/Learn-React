@@ -4,6 +4,7 @@ import Header from './Header.js';
 import AllFeatures from './AllFeatures.js';
 import InviteMeContainer from './InviteMeContainer.js';
 import TeamMemberContainer from './TeamMemberContainer.js';
+import InformationText from './InformationText.js';
 class App extends Component {
 
   state = {
@@ -48,12 +49,8 @@ class App extends Component {
         <AllFeatures features={this.state.features}/>
         <InviteMeContainer />
         <div className="container">
-          <div className="row mt centered">
-            <div className="col-lg-6 col-lg-offset-3">
-              <h1>Flatty is for Everyone.</h1>
-              <h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-            </div>
-          </div>
+          <InformationText mainText={["Flatty is for Everyone."]}
+          description="It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout." />
         </div>
         <InviteMeContainer />
 
