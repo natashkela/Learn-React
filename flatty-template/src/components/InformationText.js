@@ -6,7 +6,7 @@ const InformationText = ({mainText, description}) => {
       <div className="col-lg-6 col-lg-offset-3">
         <h1>
           {mainText.map((text,index)=>(
-            <span> {text} <br/> </span>
+            <span key={index}> {text} <br/> </span>
           ))}
         </h1>
         <h3>{description}</h3>

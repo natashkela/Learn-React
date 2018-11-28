@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import pic1 from '../img/pic1.jpg';
 import pic2 from '../img/pic2.jpg';
 import pic3 from '../img/pic3.jpg';
-const TeamMember = ({name,about}) => {
+const TeamMember = ({name,about,index}) => {
   return (
     <div className="col-lg-4">
       <img className="img-circle" src={pic1} width="140" alt="" />
@@ -16,6 +16,7 @@ const TeamMember = ({name,about}) => {
 
 TeamMember.propTypes = {
   name: PropTypes.string,
-  about: PropTypes.string
+  about: PropTypes.string,
+  index: PropTypes.number
 }
 export default TeamMember;

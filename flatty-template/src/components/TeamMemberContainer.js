@@ -12,7 +12,7 @@ const TeamMemberContainer = ({team}) => {
       <InformationText mainText={mainText}/>
       <div className="row mt centered">
         {team.map((member,index)=>(
-          <TeamMember name={member.name} key={index} about={member.about} />
+          <TeamMember name={member.name} key={index} index={index+1} about={member.about} />
         ))}
       </div>
     </div>
