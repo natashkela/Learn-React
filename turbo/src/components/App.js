@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 import OurMission from './OurMission.js';
+import TabCarListNavigation from './TabCarListNavigation.js';
+import TabAvailableCarsBrief from './TabAvailableCarsBrief.js';
 class App extends Component {
   render() {
     return (
@@ -111,153 +113,10 @@ class App extends Component {
           </div>
           <div className="rq-content-block with-border-bottom vertical-line">
             <div className="rq-car-listing-tab">
-              <ul className="nav nav-tabs parent-tab" role="tablist">
-                <li role="presentation" className="active">
-                  <a href="#top-popular"  role="tab" data-toggle="tab">Top Popular</a></li>
-                <li role="presentation">
-                  <a href="#new-cars"  role="tab" data-toggle="tab">New Cars</a></li>
-                <li role="presentation">
-                  <a href="#sale-off"  role="tab" data-toggle="tab">Sale Off</a></li>
-              </ul>
+              <TabCarListNavigation />
               <div className="tab-content">
                 <div role="tabpanel" className="tab-pane fade in active" id="top-popular">
-                  <div className="child-tab-wrapper">
-                    <ul className="nav nav-tabs" role="tablist">
-                      <li role="presentation" className="active">
-                        <a href="#car-one"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Lamborghini Aventado 2012</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$39.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-two"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Ford Red Sport Car</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$29.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-three"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail3.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-four"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-five"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="tab-content">
-                      <div role="tabpanel" className="tab-pane fade in active" id="car-one">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Lamborghini Aventado</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg"></div>
-                            <img src="img/tab-image/full-img1.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-two">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Ford Red Sport Car</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg ford"></div>
-                            <img src="img/tab-image/full-img2.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-three">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-four">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-five">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                    <TabAvailableCarsBrief />
                 </div>
 
                 <div role="tabpanel" className="tab-pane fade" id="new-cars">
