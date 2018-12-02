@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar.js';
+import Footer from './Footer.js';
 class App extends Component {
   render() {
     return (
@@ -671,75 +672,7 @@ class App extends Component {
           </div>
         </div>
       </div>
-      <footer className="rq-footer">
-        <div className="rq-main-footer">
-          <div className="container">
-            <button className="toggle-widget">Footer widget</button>
-            <div className="footer-widget">
-              <div className="row">
-                <div className="col-md-3 col-sm-3">
-                  <div className="widget-list">
-                    <ul>
-                      <li><a href="#">Site map</a></li>
-                      <li><a href="#">Terms & Conditions</a></li>
-                      <li><a href="#">Privacy Policy</a></li>
-                      <li><a href="#">Help</a></li>
-                      <li><a href="#">Affiliate</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-3 col-sm-3">
-                  <div className="widget-list">
-                    <ul className="address">
-                      <li><a href="#">Our Location</a></li>
-                      <li><a href="#">Career</a></li>
-                      <li><a href="#">About</a></li>
-                      <li><a href="#">Contact</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-3 col-sm-3">
-                  <div className="widget-list">
-                    <ul className="address">
-                      <li><a href="#">FAQs</a></li>
-                      <li><a href="#">Blog</a></li>
-                      <li><a href="#">Car Blog</a></li>
-                      <li><a href="#">Location</a></li>
-                      <li><a href="#">Press</a></li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-3 col-sm-3">
-                  <div className="widget-list">
-                    <div className="rq-newsletter">
-                      <h5>Sign up for get our newsletter</h5>
-                      <form action="#">
-                        <input className="fq-newsletter-form" type="text" placeholder="Your Email..." />
-                        <button className="rq-btn" type="submit"><i className="ion-android-send"></i></button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="rq-copyright-section">
-          <div className="container">
-            <div className="copyright-content">
-              <p><a href="#"><img src="img/company-logo.png" alt="" /></a> © 2016 <a href="#">Turbo, Inc</a>.</p>
-              <ul className="list-unstyled social-list">
-                <li><a href="#"><i className="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i className="fa fa-facebook"></i></a></li>
-                <li><a href="#"><i className="fa fa-google-plus"></i></a></li>
-                <li><a href="#"><i className="fa fa-linkedin"></i></a></li>
-                <li><a href="#"><i className="fa fa-rss"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       </div>
     );
   }
