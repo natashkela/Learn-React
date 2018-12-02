@@ -2,7 +2,6 @@ import React from 'react';
 import NavbarDropdownItem from './Navbar-DropdownItem.js';
 import PropTypes from 'prop-types';
 const NavbarItem = ({mainMenuItem}) => {
-  console.log(mainMenuItem);
   let mainMenu = mainMenuItem.mainMenuItem;
   let dropdownMenuItems = mainMenuItem.dropdownMenuItems;
   if(dropdownMenuItems.length>0){
