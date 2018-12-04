@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 import OurMission from './OurMission.js';
 import CarListingTabContainer from './CarListingTabContainer.js';
-import Searchbox from './Searchbox.js';
+import IndexHeader from './IndexHeader.js';
 class App extends Component {
   state = {
     list: [
@@ -115,35 +114,7 @@ class App extends Component {
     return (
       <div>
       <div id="main-wrapper">
-        <header className="header">
-          <div className="header-body">
-            <div className="header-overlay"></div>
-            <div className="container">
-              <h1>Turbo helps you</h1>
-              <p>Rent car to move from local hosts in 190+ countries.</p>
-              <Searchbox />
-              <div className="rq-counting-list">
-                <ul className="list-unstyled">
-                  <li>
-                    <span className="count-result" data-from="25" data-to="12460" data-speed="5000" data-refresh-interval="50"></span>
-                    <span className="count-category">User access</span>
-                  </li>
-                  <li>
-                    <span className="count-result" data-from="25" data-to="8960" data-speed="5000" data-refresh-interval="50"></span>
-                    <span className="count-category">Cars</span>
-                  </li>
-                  <li>
-                    <span className="count-result" data-from="25" data-to="10360" data-speed="5000" data-refresh-interval="50"></span>
-                    <span className="count-category">Reviews</span>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-          <Navbar />
-        </header>
-
+        <IndexHeader />
         <div className="rq-page-content">
           <div className="rq-content-block gray-bg">
             <span className="bg-large-text">Turbo</span>
