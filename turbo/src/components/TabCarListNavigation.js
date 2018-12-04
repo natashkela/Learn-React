@@ -2,16 +2,13 @@ import React from 'react';
 const TabCarListNavigation = () => {
   let list = [
       {
-        name: "Top Popular",
-        href: "#tab-popular"
+        name: "Top Popular"
       },
       {
-        name: "New Cars",
-        href: "#new-cars"
+        name: "New Cars"
       },
       {
-        name: "Sale Off",
-        href: "#sale-off"
+        name: "Sale Off"
       }
   ];
   console.log(list);
@@ -20,7 +17,7 @@ const TabCarListNavigation = () => {
       {list.map((tab,index)=>
 
         <li role="presentation" key={index} className={index == 0 ? "active":""}>
-          <a href={tab.href}  role="tab" data-toggle="tab">{tab.name}</a></li>
+          <a href={"#car-tab"+(index)}  role="tab" data-toggle="tab">{tab.name}</a></li>
       )}
     </ul>
   );

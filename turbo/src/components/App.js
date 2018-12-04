@@ -2,9 +2,114 @@ import React, { Component } from 'react';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 import OurMission from './OurMission.js';
-import TabCarListNavigation from './TabCarListNavigation.js';
-import TabAvailableCarsBrief from './TabAvailableCarsBrief.js';
+import CarListingTabContainer from './CarListingTabContainer.js';
 class App extends Component {
+  state = {
+    list: [
+      [
+        {
+          title: "Lamborghini Aventado 2012",
+          description: "Four Seater Car",
+          price: 39.00,
+          luggage_space:2,
+          smoking_allowed:0,
+          kilomeeters: 30
+        },
+        {
+          title: "Ford Red Sport Car",
+          description: "Four Seater Car",
+          price: 29.00,
+          luggage_space:3,
+          smoking_allowed:0,
+          kilomeeters: 36
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:3,
+          smoking_allowed:1,
+          kilomeeters: 30
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:3,
+          smoking_allowed:0,
+          kilomeeters: 40
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:2,
+          smoking_allowed:1,
+          kilomeeters: 35
+        }
+      ],
+      [
+        {
+          title: "Ford Red Sport Car",
+          description: "Four Seater Car",
+          price: 29.00,
+          luggage_space:3,
+          smoking_allowed:0,
+          kilomeeters: 36
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:3,
+          smoking_allowed:1,
+          kilomeeters: 30
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:3,
+          smoking_allowed:0,
+          kilomeeters: 40
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:2,
+          smoking_allowed:1,
+          kilomeeters: 35
+        }
+      ],
+      [
+        {
+          title: "Lamborghini Aventado 2012",
+          description: "Four Seater Car",
+          price: 39.00,
+          luggage_space:2,
+          smoking_allowed:0,
+          kilomeeters: 30
+        },
+        {
+          title: "Ford Red Sport Car",
+          description: "Four Seater Car",
+          price: 29.00,
+          luggage_space:3,
+          smoking_allowed:0,
+          kilomeeters: 36
+        },
+        {
+          title: "Kia Rio White Car 2016",
+          description: "Four Seater Car",
+          price: 27.00,
+          luggage_space:3,
+          smoking_allowed:1,
+          kilomeeters: 30
+        },
+      ]
+    ]
+  }
   render() {
     return (
       <div>
@@ -111,260 +216,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-          <div className="rq-content-block with-border-bottom vertical-line">
-            <div className="rq-car-listing-tab">
-              <TabCarListNavigation />
-              <div className="tab-content">
-                <div role="tabpanel" className="tab-pane fade in active" id="top-popular">
-                    <TabAvailableCarsBrief />
-                </div>
-
-                <div role="tabpanel" className="tab-pane fade" id="new-cars">
-                  <div className="child-tab-wrapper">
-                    <ul className="nav nav-tabs" role="tablist">
-                      <li role="presentation">
-                        <a href="#car-two-new"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Ford Red Sport Car</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$29.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation" className="active">
-                        <a href="#car-one-new"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Lamborghini Aventado 2012</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$39.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-three-new"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail3.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-four-new"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-five-new"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="tab-content">
-                      <div role="tabpanel" className="tab-pane fade in active" id="car-one-new">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Lamborghini Aventado</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg"></div>
-                            <img src="img/tab-image/full-img1.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-two-new">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Ford Red Sport Car</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg ford"></div>
-                            <img src="img/tab-image/full-img2.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-three-new">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-four-new">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-five-new">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-
-                <div role="tabpanel" className="tab-pane fade in" id="sale-off">
-                  <div className="child-tab-wrapper">
-                    <ul className="nav nav-tabs" role="tablist">
-                      <li role="presentation" className="active">
-                        <a href="#car-one-sale"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Lamborghini Aventado 2012</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$39.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-two-sale"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Ford Red Sport Car</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$29.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-three-sale"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail3.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-four-sale"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail1.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                      <li role="presentation">
-                        <a href="#car-five-sale"  role="tab" data-toggle="tab">
-                          <img src="img/tab-image/thumbnail2.jpg" alt="" />
-                          <span className="tittle">Kia Rio White Car 2016</span>
-                          <span className="car-des">Four Seater Car</span>
-                          <span className="rent-price">$27.00<b>/Day</b></span>
-                        </a>
-                      </li>
-                    </ul>
-                    <div className="tab-content">
-                      <div role="tabpanel" className="tab-pane fade in active" id="car-one-sale">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Lamborghini Aventado</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg"></div>
-                            <img src="img/tab-image/full-img1.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-two-sale">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Ford Red Sport Car</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg ford"></div>
-                            <img src="img/tab-image/full-img2.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div role="tabpanel" className="tab-pane fade" id="car-three-sale">
-                        <div className="rq-tab-car-details">
-                          <div className="car-logo">
-                            <img src="img/partner-logo/partner3.png" alt="" />
-                          </div>
-                          <h3>Kia Rio White Car 2016</h3>
-                          <div className="large-image-wrapper">
-                            <div className="image-bg kia"></div>
-                            <img src="img/tab-image/full-img3.png" alt="" />
-                          </div>
-                          <div className="car-details-option">
-                            <span><i className="ion-briefcase"></i>2 large bags</span>
-                            <span><i className="ion-no-smoking"></i>No smoking</span>
-                            <span><i className="ion-speedometer"></i>08/12 mpg</span>
-                            <span>Starting at <span className="red-section">$39.0</span>/day</span>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <CarListingTabContainer list={this.state.list} />
           <div className="rq-content-block gray-bg">
             <div className="container">
               <div className="rq-partners-section">
