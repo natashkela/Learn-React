@@ -11,7 +11,6 @@ const TabCarListNavigation = () => {
         name: "Sale Off"
       }
   ];
-  console.log(list);
   return (
     <ul className="nav nav-tabs parent-tab" role="tablist">
       {list.map((tab,index)=>

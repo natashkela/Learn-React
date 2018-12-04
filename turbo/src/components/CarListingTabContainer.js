@@ -9,7 +9,7 @@ const CarListingTabContainer = ({list}) => {
         <TabCarListNavigation />
         <div className="tab-content">
           {list.map((tabCarList,index)=>
-              <TabAvailableCarsBrief list={tabCarList} id={"car-tab"+index} key={index} />
+              <TabAvailableCarsBrief list={tabCarList} id={"car-tab"+index} key={index} count={index}/>
           )}
         </div>
       </div>
