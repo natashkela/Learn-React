@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import Footer from './Footer.js';
+import IndexHeader from './IndexHeader.js';
 import IndexIntroduction from './IndexIntroduction.js';
 import CarListingTabContainer from './CarListingTabContainer.js';
+import PartnerImageContainer from './PartnerImageContainer.js';
 import TestimonialsContainer from './TestimonialsContainer.js';
 import RecentTipsContainer from './RecentTipsContainer.js';
-import IndexHeader from './IndexHeader.js';
+import Footer from './Footer.js';
 class App extends Component {
   state = {
     list: [
@@ -122,15 +123,7 @@ class App extends Component {
           <CarListingTabContainer list={this.state.list} />
           <div className="rq-content-block gray-bg">
             <div className="container">
-              <div className="rq-partners-section">
-                <div className="partners-wrapper">
-                  <div className="partner-single"><a href="#"><img src="img/partner-logo/partner1.png" alt="" /></a></div>
-                  <div className="partner-single"><a href="#"><img src="img/partner-logo/partner3.png" alt="" /></a></div>
-                  <div className="partner-single"><a href="#"><img src="img/partner-logo/partner2.png" alt="" /></a></div>
-                  <div className="partner-single"><a href="#"><img src="img/partner-logo/partner4.png" alt="" /></a></div>
-                  <div className="partner-single"><a href="#"><img src="img/partner-logo/partner5.png" alt="" /></a></div>
-                </div>
-              </div>
+              <PartnerImageContainer />
               <TestimonialsContainer />
               <RecentTipsContainer />
             </div>
