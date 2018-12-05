@@ -1,0 +1,8 @@
+.dropdown:hover .dropdown-menu{
+  opacity:1;
+  visibility:visible;
+}
+
+.owl-carousel{
+  display:block;
+}

@@ -7,7 +7,7 @@ const TabAvailableCarsBrief = ({list,id,count}) => {
       <div className="child-tab-wrapper">
         <ul className="nav nav-tabs" role="tablist">
           {list.map((car, index)=>
-            <li role="presentation" key={index} className={index == 0 ? "active" : ""}>
+            <li role="presentation" key={index}>
               <a href={"#car-"+(index+1)}  role="tab" data-toggle="tab">
                 <img src={require("../img/tab-image/thumbnail"+(index+1)+".jpg")} alt="" />
                 <span className="tittle">{car.title}</span>

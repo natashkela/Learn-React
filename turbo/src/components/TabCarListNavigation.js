@@ -15,7 +15,7 @@ const TabCarListNavigation = () => {
     <ul className="nav nav-tabs parent-tab" role="tablist">
       {list.map((tab,index)=>
 
-        <li role="presentation" key={index} className={index == 0 ? "active":""}>
+        <li role="presentation" key={index} >
           <a href={"#car-tab"+(index)}  role="tab" data-toggle="tab">{tab.name}</a></li>
       )}
     </ul>

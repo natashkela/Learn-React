@@ -31,10 +31,28 @@ const TestimonialsContainer = () => {
     <div className="rq-testimonial-section">
       <div className="rq-testimonial-content">
         <h1 className="rq-title">What Clients Say<span className="rq-dot">.</span></h1>
-        <div className=" owl-carousel testimonial-wrapper">
-          {list.map((testimonial,index)=>
-            <Testimonial key={index} userId={testimonial.userId} author={testimonial.author} comment={testimonial.comment} stars={testimonial.stars} />
-          )}
+        <div className=" owl-carousel testimonial-wrapper owl-theme owl-center owl-loaded">
+          <div className="owl-stage-outer">
+            {list.map((testimonial,index)=>
+              <Testimonial key={index} userId={testimonial.userId} author={testimonial.author} comment={testimonial.comment} stars={testimonial.stars} />
+            )}
+          </div>
+          <div className="owl-controls">
+              <div className="owl-dots">
+                <div className="owl-dot active">
+                  <span></span>
+                </div>
+              <div className="owl-dot">
+                <span></span>
+              </div>
+              <div className="owl-dot">
+                <span></span>
+              </div>
+              <div className="owl-dot">
+                <span></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
