@@ -5,6 +5,7 @@ import CarListingTabContainer from './CarListingTabContainer.js';
 import PartnerImageContainer from './PartnerImageContainer.js';
 import TestimonialsContainer from './TestimonialsContainer.js';
 import RecentTipsContainer from './RecentTipsContainer.js';
+import CallSupportContainer from './CallSupportContainer.js';
 import Footer from './Footer.js';
 class App extends Component {
   state = {
@@ -128,11 +129,7 @@ class App extends Component {
               <RecentTipsContainer />
             </div>
           </div>
-          <div className="rq-call-to-action">
-            <div className="container">
-              <h2>Need help renting online? <span>(855) 962-3621</span></h2>
-            </div>
-          </div>
+          <CallSupportContainer />
         </div>
       </div>
       <Footer />
