@@ -1,20 +1,36 @@
 import React from 'react';
+import CountUp from 'react-countup';
 const Countview = () => {
+  const countDuration = 4;
+  let list = [
+    {
+      title:"User Access",
+      start:0,
+      end:12640,
+      duration: countDuration
+    },
+    {
+      title:"Cars",
+      start:0,
+      end:8976,
+      duration: countDuration
+    },
+    {
+      title:"Reviews",
+      start:0,
+      end:256,
+      duration: countDuration
+    }
+  ];
   return(
     <div className="rq-counting-list">
       <ul className="list-unstyled">
-        <li>
-          <span className="count-result" data-from="25" data-to="12460" data-speed="5000" data-refresh-interval="50"></span>
-          <span className="count-category">User access</span>
-        </li>
-        <li>
-          <span className="count-result" data-from="25" data-to="8960" data-speed="5000" data-refresh-interval="50"></span>
-          <span className="count-category">Cars</span>
-        </li>
-        <li>
-          <span className="count-result" data-from="25" data-to="10360" data-speed="5000" data-refresh-interval="50"></span>
-          <span className="count-category">Reviews</span>
-        </li>
+        {list.map((count,index)=>
+          <li key={index}>
+            <CountUp className="count-result" start={count.start} end={count.end} duration={count.duration} />
+            <span className="count-category">{count.title}</span>
+          </li>
+        )}
       </ul>
     </div>
   )
