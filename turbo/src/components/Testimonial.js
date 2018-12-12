@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Testimonial = ({author,stars,comment,userId}) => {
+const Testimonial = ({author,stars,comment,userId,isActive}) => {
   return (
-    <div>
+    <div className={isActive ? "active" : "hidden"}>
       <div className="item">
         <p className="testimoinal-text">{comment}</p>
         <span className="author-name-title">
