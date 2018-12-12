@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Testimonial = ({author,stars,comment,userId}) => {
+const Testimonial = ({author,stars,comment,userId,isActive}) => {
   return (
-    <div>
+    <div className={isActive ? "active" : "hidden"}>
       <div className="item">
         <p className="testimoinal-text">{comment}</p>
         <span className="author-name-title">
@@ -25,6 +25,7 @@ Testimonial.propTypes = {
   author:PropTypes.string,
   stars: PropTypes.number,
   comment:PropTypes.string,
-  userId:PropTypes.number
+  userId:PropTypes.number,
+  isActive: PropTypes.bool
 }
 export default Testimonial;
