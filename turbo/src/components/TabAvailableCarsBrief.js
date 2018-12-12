@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import TabAvailableCarsLong from './TabAvailableCarsLong.js';
-const TabAvailableCarsBrief = ({list,id,count}) => {
+const TabAvailableCarsBrief = ({list,id,count,isActive}) => {
   return (
-    <div role="tabpanel" className={count==0?"tab-pane fade in active":"tab-pane fade in"} id={id}>
+    <div role="tabpanel" className={isActive ? "tab-pane fade in active" : "tab-pane fade in"} id={id}>
       <div className="child-tab-wrapper">
         <ul className="nav nav-tabs" role="tablist">
           {list.map((car, index)=>
@@ -23,6 +23,9 @@ const TabAvailableCarsBrief = ({list,id,count}) => {
   );
 }
 TabAvailableCarsBrief.propTypes = {
-  list:PropTypes.array
+  list:PropTypes.array,
+  id:PropTypes.string,
+  count:PropTypes.number,
+  isActive:PropTypes.bool
 }
 export default TabAvailableCarsBrief;
