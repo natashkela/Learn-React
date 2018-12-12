@@ -25,6 +25,7 @@ Testimonial.propTypes = {
   author:PropTypes.string,
   stars: PropTypes.number,
   comment:PropTypes.string,
-  userId:PropTypes.number
+  userId:PropTypes.number,
+  isActive: PropTypes.bool
 }
 export default Testimonial;
