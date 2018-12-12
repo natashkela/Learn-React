@@ -6,3 +6,8 @@
 .owl-carousel{
   display:block;
 }
+
+.header-body{
+  background:url('../img/turbo-banner.jpg') top center no-repeat!important;
+  background-size:cover;
+}
