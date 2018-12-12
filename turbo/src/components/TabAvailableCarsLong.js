@@ -5,7 +5,7 @@ const TabAvailableCarsLong = ({list,id}) => {
     <div role="tabpanel" className="tab-pane fade in active" id={id}>
       <div className="tab-content">
         {list.map((tabpanel,index)=>
-          <div role="tabpanel" key={index} className={index == 0 ? "tab-pane fade in active" : "tab-pane fade in"} id={"car-"+(index+1)}>
+          <div role="tabpanel" key={index} className={index == 0 ? "tab-pane fade in active" : "tab-pane fade in"} id={id+'-'+(index+1)}>
             <div className="rq-tab-car-details">
               <div className="car-logo">
                 <img src={require("../img/partner-logo/partner"+(index+1)+".png")} alt="" />

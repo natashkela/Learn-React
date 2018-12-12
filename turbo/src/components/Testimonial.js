@@ -2,21 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const Testimonial = ({author,stars,comment,userId}) => {
   return (
-    <div className="item">
-      <p className="testimoinal-text">{comment}</p>
-      <span className="author-name-title">
-        <img src="img/testimoianl1.png" alt="" />
-        <a href={"profile?id="+userId}>{author}<i className="ion-ios-minus-empty"></i>
-          <span>
-            {Array.apply(null, { length: stars }).map((e, i) =>
-                <i key={i} className="ion-android-star"></i>
-              )
-            }
-          </span>
-        </a>
-      </span>
+    <div>
+      <div className="item">
+        <p className="testimoinal-text">{comment}</p>
+        <span className="author-name-title">
+          <img src={require("../img/testimoianl1.png")} alt="" />
+          <a href={"profile?id="+userId}>{author}<i className="ion-ios-minus-empty"></i>
+            <span>
+              {Array.apply(null, { length: stars }).map((e, i) =>
+                  <i key={i} className="ion-android-star"></i>
+                )
+              }
+            </span>
+          </a>
+        </span>
 
-    </div>
+      </div>
+      </div>
   );
 }
 Testimonial.propTypes = {
