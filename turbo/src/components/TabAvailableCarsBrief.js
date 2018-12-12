@@ -8,7 +8,7 @@ const TabAvailableCarsBrief = ({list,id,count,isActive}) => {
         <ul className="nav nav-tabs" role="tablist">
           {list.map((car, index)=>
             <li role="presentation" key={index}>
-              <a href={"#car-"+(index+1)}  role="tab" data-toggle="tab">
+              <a href={'#'+id+'-'+(index+1)}  role="tab" data-toggle="tab">
                 <img src={require("../img/tab-image/thumbnail"+(index+1)+".jpg")} alt="" />
                 <span className="tittle">{car.title}</span>
                 <span className="car-des">{car.description}</span>
@@ -17,7 +17,7 @@ const TabAvailableCarsBrief = ({list,id,count,isActive}) => {
             </li>
           )}
         </ul>
-        <TabAvailableCarsLong list={list}/>
+        <TabAvailableCarsLong list={list} id={id}/>
       </div>
     </div>
   );
