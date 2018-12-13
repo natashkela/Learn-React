@@ -4,11 +4,23 @@ import Breadcrumb from './Breadcrumb.js';
 import AboutUsContentContainer from './AboutUsContentContainer';
 import Footer from './Footer.js';
 class About extends Component {
+  state={
+     title: "About Us",
+     breadcrumbs: [
+      {
+        title: "Home",
+        href: "/"
+      },
+      {
+        title:"About Us"
+      }
+    ]
+  }
   render() {
     return (
       <div>
         <Navbar />
-        <Breadcrumb />
+        <Breadcrumb title={this.state.title} breadcrumbs={this.state.breadcrumbs}/>
         <AboutUsContentContainer />
         <Footer />
       </div>

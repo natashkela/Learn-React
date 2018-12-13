@@ -13,6 +13,10 @@
 }
 
 .inner-page-banner{
-  background: url('../img/inner-banner/about-us.jpg') top center no-repeat!important; 
-  background-size: cover;
+  background: url('../img/inner-banner/about-us.jpg') top center no-repeat!important;
+  background-size: cover!important;
+}
+
+.member-single:hover{
+  cursor:pointer;
 }

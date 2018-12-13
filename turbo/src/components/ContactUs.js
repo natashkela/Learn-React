@@ -1,5 +1,9 @@
 import React from 'react';
 const ContactUs = () => {
+  let address = "1234 New Design St. Melbourne, Australia";
+  let email = "hello@turbotheme.com";
+  let phone = "+880 1738 567864";
+
   return (
     <div className="about-us-content-single">
       <div className="row">
@@ -9,15 +13,15 @@ const ContactUs = () => {
         <div className="col-md-8">
           <div className="contact-single">
             <i className="icon_pin"></i>
-            <p>1234 New Design St. Melbourne, Australia</p>
+            <p>{address}</p>
           </div>
           <div className="contact-single">
             <i className="icon_mail_alt"></i>
-            <p>hello@turbotheme.com</p>
+            <p>{email}</p>
           </div>
           <div className="contact-single">
             <i className="icon_phone"></i>
-            <p>+880 1738 567864</p>
+            <p>{phone}</p>
           </div>
           <div className="opening-hour">
             <p> HOUR WORK:  <span> MONDAY - FRIDAY  /  08AM - 05PM</span></p>
