@@ -11,3 +11,8 @@
   background:url('../img/turbo-banner.jpg') top center no-repeat!important;
   background-size:cover;
 }
+
+.inner-page-banner{
+  background: url('../img/inner-banner/about-us.jpg') top center no-repeat!important; 
+  background-size: cover;
+}
