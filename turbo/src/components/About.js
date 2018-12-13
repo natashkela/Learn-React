@@ -18,7 +18,7 @@ class About extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="about-us">
         <Navbar />
         <Breadcrumb title={this.state.title} breadcrumbs={this.state.breadcrumbs}/>
         <AboutUsContentContainer />

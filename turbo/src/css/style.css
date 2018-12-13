@@ -20,3 +20,9 @@
 .member-single:hover{
   cursor:pointer;
 }
+
+.about-us .navbar{
+  position: sticky;
+  top: 0px;
+  z-index: 40;
+}
