@@ -1,7 +1,8 @@
 import React from 'react';
-const Searchbox = () => {
+import PropTypes from 'prop-types';
+const Searchbox = ({withoutBorder}) => {
   return (
-    <div className="rq-search-container">
+    <div className={withoutBorder ? "rq-search-container" : "rq-search-container with-border"}>
       <div className="rq-search-single">
         <div className="rq-search-content">
           <span className="rq-search-heading">Location</span>
@@ -59,5 +60,8 @@ const Searchbox = () => {
       </div>
     </div>
   );
+}
+Searchbox.propTypes={
+  withoutBorder: PropTypes.bool
 }
 export default Searchbox;

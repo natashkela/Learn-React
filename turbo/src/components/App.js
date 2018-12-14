@@ -8,12 +8,14 @@ import {
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
+import Cars from './Cars';
 const App = () => (
   <BrowserRouter>
     <div>
       <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
+      <Route path="/cars" component={Cars} />
     </div>
   </BrowserRouter>
 );

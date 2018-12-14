@@ -22,7 +22,8 @@
 }
 
 .about-us .navbar,
-.contact-us .navbar{
+.contact-us .navbar,
+.cars .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
@@ -34,4 +35,22 @@
 
 body {
   overflow-x: hidden;
+}
+
+.rc-slider-track{
+  background-color: #efa80f!important;
+}
+.rc-slider-handle,
+.rc-slider-handle:active,
+.rc-slider-handle:hover{
+  border-color:#efa80f;
+}
+.rc-slider-handle:active{
+  box-shadow:0 0 5px #efa80f;
+}
+.rq-pricing-slider{
+  padding:0px;
+}
+.rc-slider-tooltip{
+  z-index:100!important;
 }

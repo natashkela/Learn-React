@@ -10,7 +10,7 @@ const IndexHeader = () => {
         <div className="container">
           <h1>Turbo helps you</h1>
           <p>Rent car to move from local hosts in 190+ countries.</p>
-          <Searchbox />
+          <Searchbox withoutBorder={true} />
           <Countview />
         </div>
       </div>
