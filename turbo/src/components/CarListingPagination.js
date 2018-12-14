@@ -1,27 +1,32 @@
 import React from 'react';
-const CarListingPagination = () =>{
+import PropTypes from 'prop-types';
+const CarListingPagination = ({currentPage,previousPage,nextPage,total}) =>{
   return(
     <div className="rq-pagination">
       <nav>
         <ul className="rq-pagination-list">
-          <li className="pagin-text">
-            <a href="#" aria-label="Previous">
-              <span aria-hidden="true"><i className="arrow_left"></i> Prev</span>
-            </a>
-          </li>
-          <li className="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a className="center-dot" href="#">...</a></li>
-          <li><a href="#">12</a></li>
-          <li className="pagin-text">
-            <a href="#" aria-label="Next">
-              <span aria-hidden="true">next <i className="arrow_right"></i></span>
-            </a>
-          </li>
+          {currentPage!=1 &&
+              <li className="pagin-text">
+                <a href="#" aria-label="Previous" onClick={()=>previousPage(currentPage)}>
+                  <span aria-hidden="true"><i className="arrow_left"></i> Prev</span>
+                </a>
+              </li>
+            }
+            {currentPage!=total &&
+              <li className="pagin-text">
+                <a href="#" aria-label="Next" onClick={()=>nextPage(currentPage)}>
+                  <span aria-hidden="true">Next <i className="arrow_right"></i></span>
+                </a>
+              </li>
+          }
         </ul>
       </nav>
     </div>
   );
+}
+CarListingPagination.propTypes = {
+  currentPage: PropTypes.number,
+  previousPage: PropTypes.func,
+  nextPage: PropTypes.func
 }
 export default CarListingPagination;

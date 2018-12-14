@@ -112,13 +112,33 @@ class CarListing extends Component{
         price:39,
         id:12
       }
-    ]
+    ],
+    page:1,
+    carPerPage:9
+  }
+  handleNextPage(currentPage){
+    let total = this.getTotalPages();
+    if(currentPage<=total){
+      this.setState(prevState=>
+        prevState.page++
+      )
+    }
+  }
+  handlePreviousPage(currentPage){
+    if(currentPage>1){
+      this.setState(prevState=>
+        prevState.page--
+      )
+    }
+  }
+  getTotalPages(){
+    return Math.ceil(this.state.list.length/this.state.carPerPage);
   }
   render(){
     return(
       <div className="rq-car-listing-wrapper">
-        <CarListingGrid list={this.state.list}/>
-        <CarListingPagination />
+        <CarListingGrid list={this.state.list.slice((this.state.page-1)*this.state.carPerPage,(this.state.carPerPage*this.state.page))}/>
+        <CarListingPagination nextPage={this.handleNextPage.bind(this)} previousPage={this.handlePreviousPage.bind(this)} currentPage={this.state.page} total={this.getTotalPages()} />
       </div>
     );
   }
