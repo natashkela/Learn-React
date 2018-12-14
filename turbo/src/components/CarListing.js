@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import CarListingGrid from './CarListingGrid.js';
+import FilterCarsBy from './FilterCarsBy.js';
+import CarListViewType from './CarListViewType.js';
 import CarListingPagination from './CarListingPagination.js';
 class CarListing extends Component{
   state={
@@ -114,7 +115,8 @@ class CarListing extends Component{
       }
     ],
     page:1,
-    carPerPage:9
+    carPerPage:9,
+    viewType:1
   }
   handleNextPage(currentPage){
     let total = this.getTotalPages();
@@ -134,11 +136,20 @@ class CarListing extends Component{
   getTotalPages(){
     return Math.ceil(this.state.list.length/this.state.carPerPage);
   }
+  handleViewTypeChange(){
+    this.setState(prevState=>
+      prevState.viewType == 1 ? prevState.viewType=0 : prevState.viewType=1
+    );
+  }
+
   render(){
     return(
-      <div className="rq-car-listing-wrapper">
-        <CarListingGrid list={this.state.list.slice((this.state.page-1)*this.state.carPerPage,(this.state.carPerPage*this.state.page))}/>
-        <CarListingPagination nextPage={this.handleNextPage.bind(this)} previousPage={this.handlePreviousPage.bind(this)} currentPage={this.state.page} total={this.getTotalPages()} />
+      <div>
+        <FilterCarsBy viewType={this.state.viewType} viewTypeChange={this.handleViewTypeChange.bind(this)}/>
+        <div className="rq-car-listing-wrapper">
+          <CarListViewType list={this.state.list.slice((this.state.page-1)*this.state.carPerPage,(this.state.carPerPage*this.state.page))} viewType={this.state.viewType}/>
+          <CarListingPagination nextPage={this.handleNextPage.bind(this)} previousPage={this.handlePreviousPage.bind(this)} currentPage={this.state.page} total={this.getTotalPages()} />
+        </div>
       </div>
     );
   }

@@ -2,7 +2,6 @@ import React,{Component} from 'react';
 import Navbar from './Navbar.js';
 import Breadcrumb from './Breadcrumb.js';
 import Searchbox from './Searchbox.js';
-import FilterCarsBy from './FilterCarsBy.js';
 import CarListing from './CarListing.js';
 import Footer from './Footer.js';
 class Cars extends Component{
@@ -30,9 +29,7 @@ class Cars extends Component{
               <h2>Search For<span className="dot">.</span></h2>
               <Searchbox />
             </div>
-            <FilterCarsBy />
             <CarListing />
-
           </div>
         </div>
         </div>

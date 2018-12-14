@@ -1,9 +1,7 @@
 import React from 'react';
 import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
-// We can just import Slider or Range to reduce bundle size
-// import Slider from './Slider';
-// import Range from './Range';
+import PropTypes from 'prop-types';
 import 'rc-slider/assets/index.css';
 import FilterByCheckboxDropdown from './FilterByCheckboxDropdown';
 
@@ -24,7 +22,7 @@ const handle = (props) => {
   );
 };
 
-const FilterCarsBy = () => {
+const FilterCarsBy = ({viewType,viewTypeChange}) => {
   let list = [
     {
       title:"Brand",
@@ -75,10 +73,14 @@ const FilterCarsBy = () => {
         </div>
       </div>
       <div className="rq-grid-list-view-option">
-        <a className="active" href="#"><i className="ion-grid"></i></a>
-        <a href="#"><i className="ion-navicon"></i></a>
+        <a className={viewType==1 ? "active" :"" } onClick={()=>viewTypeChange()} href="#"><i className="ion-grid"></i></a>
+        <a className={viewType==0 ? "active" :"" } onClick={()=>viewTypeChange()} href="#"><i className="ion-navicon"></i></a>
       </div>
     </div>
   );
+}
+FilterCarsBy.propTypes={
+  viewType:PropTypes.number,
+  viewTypeChange:PropTypes.func
 }
 export default FilterCarsBy;

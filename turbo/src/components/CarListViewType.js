@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const CarListingGrid = ({list})=>{
+const CarListViewType = ({list,viewType})=>{
   return(
-    <div className="rq-listing-choose rq-listing-grid">
+    <div className={viewType ? "rq-listing-choose rq-listing-grid" : "rq-listing-choose rq-listing-list"}>
       <div className="row">
         {list.map((grid,index)=>
           <div key={index} className="col-md-4 col-sm-6">
@@ -38,7 +38,8 @@ const CarListingGrid = ({list})=>{
     </div>
   );
 }
-CarListingGrid.propTypes={
-  list:PropTypes.array
+CarListViewType.propTypes={
+  list:PropTypes.array,
+  viewType:PropTypes.number
 }
-export default CarListingGrid;
+export default CarListViewType;
