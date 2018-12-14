@@ -21,8 +21,17 @@
   cursor:pointer;
 }
 
-.about-us .navbar{
+.about-us .navbar,
+.contact-us .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
+}
+
+.rq-contact-us-grid-block{
+  padding: 105px 0 90px;
+}
+
+body {
+  overflow-x: hidden;
 }
