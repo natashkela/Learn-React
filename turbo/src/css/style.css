@@ -22,6 +22,7 @@
 }
 
 .about-us .navbar,
+.car-detail .navbar,
 .contact-us .navbar,
 .cars .navbar{
   position: sticky;
@@ -53,4 +54,12 @@ body {
 }
 .rc-slider-tooltip{
   z-index:100!important;
+}
+.author-img{
+  background: url('../img/post-single/single-post-author.jpg') top center no-repeat;
+  background-size: cover
+}
+
+.booking-details .total-price{
+  margin-top:100px;
 }

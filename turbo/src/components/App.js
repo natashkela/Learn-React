@@ -9,6 +9,7 @@ import Home from './Home';
 import About from './About';
 import Contact from './Contact';
 import Cars from './Cars';
+import CarDetail from './CarDetail';
 const App = () => (
   <BrowserRouter>
     <div>
@@ -16,6 +17,7 @@ const App = () => (
       <Route path="/about" component={About} />
       <Route path="/contact" component={Contact} />
       <Route path="/cars" component={Cars} />
+      <Route path="/car-detail" component={CarDetail} />
     </div>
   </BrowserRouter>
 );
