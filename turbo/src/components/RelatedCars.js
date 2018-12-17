@@ -1,53 +1,27 @@
 import React from 'react';
-const RelatedCars = () => {
+import PropTypes from 'prop-types';
+const RelatedCars = ({relatedCars}) => {
   return (
     <div className="col-md-6">
       <h3 className="section-title">Related Cars</h3>
       <div className="child-tab-wrapper related-cars">
         <ul className="nav nav-tabs" role="tablist">
-          <li>
+        {relatedCars.map((car,index)=>
+          <li key={index}>
             <a href="#">
-              <img src="img/listing-details-tab/tab-image1.png" alt="" />
-              <span className="tittle">Lamborghini Aventado 2012</span>
-              <span className="car-des">Four Seater Car</span>
-              <span className="rent-price">$39.00<b>/Day</b></span>
+              <img src={require("../img/listing-details-tab/tab-image"+car.id+".png")} alt="" />
+              <span className="tittle">{car.title}</span>
+              <span className="car-des">{car.description}</span>
+              <span className="rent-price">${car.price}<b>/Day</b></span>
             </a>
           </li>
-          <li>
-            <a href="#">
-              <img src="img/listing-details-tab/tab-image2.png" alt="" />
-              <span className="tittle">Ford Red Sport Car</span>
-              <span className="car-des">Four Seater Car</span>
-              <span className="rent-price">$29.00<b>/Day</b></span>
-            </a>
-          </li>
-          <li role="presentation">
-            <a href="#car-three"  role="tab" data-toggle="tab">
-              <img src="img/listing-details-tab/tab-image3.png" alt="" />
-              <span className="tittle">Kia Rio White Car 2016</span>
-              <span className="car-des">Four Seater Car</span>
-              <span className="rent-price">$27.00<b>/Day</b></span>
-            </a>
-          </li>
-          <li role="presentation">
-            <a href="#car-four"  role="tab" data-toggle="tab">
-              <img src="img/listing-details-tab/tab-image1.png" alt="" />
-              <span className="tittle">Kia Rio White Car 2016</span>
-              <span className="car-des">Four Seater Car</span>
-              <span className="rent-price">$27.00<b>/Day</b></span>
-            </a>
-          </li>
-          <li role="presentation">
-            <a href="#car-five"  role="tab" data-toggle="tab">
-              <img src="img/listing-details-tab/tab-image2.png" alt="" />
-              <span className="tittle">Kia Rio White Car 2016</span>
-              <span className="car-des">Four Seater Car</span>
-              <span className="rent-price">$27.00<b>/Day</b></span>
-            </a>
-          </li>
+        )}
         </ul>
       </div>
     </div>
   );
+}
+RelatedCars.propTypes = {
+  relatedCars:PropTypes.array
 }
 export default RelatedCars;

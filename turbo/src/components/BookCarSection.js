@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Searchbox from './Searchbox.js';
-const BookCarSection = ()=>{
+const BookCarSection = ({totalCost})=>{
   return (
     <div className="rq-content-block gray-bg">
       <div className="container">
@@ -12,7 +13,7 @@ const BookCarSection = ()=>{
           <div className="booking-details">
             <div className="row">
               <div className="col-md-12">
-                <h3 className="total-price">Total Booking Cost : <span>$150.00</span></h3>
+                <h3 className="total-price">Total Booking Cost : <span>${totalCost}</span></h3>
               </div>
               <div className="col-md-12">
                 <div className="book-btn">
@@ -25,5 +26,8 @@ const BookCarSection = ()=>{
       </div>
     </div>
   );
+}
+BookCarSection.propTypes = {
+  totalCost:PropTypes.number
 }
 export default BookCarSection;
