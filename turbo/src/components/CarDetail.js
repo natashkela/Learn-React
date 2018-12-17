@@ -95,7 +95,40 @@ class CarDetail extends Component{
         price: 27.00,
         id: 4
       }
+    ],
+    faqs:[
+      {
+        question: "What is Road tax ?",
+        answer: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit tubo auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit exo consequat ipsum, nec sagittis sem nibh id elit.",
+        isActive:false
+      },
+      {
+        question: "How to use Manual Model of Audi R8?",
+        answer: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit tubo auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit exo consequat ipsum, nec sagittis sem nibh id elit.",
+        isActive:false
+      },
+      {
+        question: "What’s fees that you have to pay ?",
+        answer: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit tubo auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit exo consequat ipsum, nec sagittis sem nibh id elit.",
+        isActive:false
+      },
+      {
+        question: "Problems with your car on road ?",
+        answer: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit tubo auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit exo consequat ipsum, nec sagittis sem nibh id elit.",
+        isActive:false
+      },
+      {
+        question: "How long limited to rent car from Turbo on the world ?",
+        answer: "This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel velit tubo auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit exo consequat ipsum, nec sagittis sem nibh id elit.",
+        isActive:false
+      },
     ]
+  }
+  toggleFaq(event, index){
+    event.preventDefault();
+    this.setState(prevState=>{
+      return prevState.faqs[index].isActive = !prevState.faqs[index].isActive;
+    })
   }
   calculateTotalCost(){
     return 150;
@@ -108,7 +141,7 @@ class CarDetail extends Component{
           <div className="rq-listing-details">
             <CarInformation breadcrumbs={this.state.breadcrumbs} title={this.state.title} car={this.state.car} reviews={this.state.reviews}/>
             <BookCarSection totalCost={this.calculateTotalCost()}/>
-            <RelatedCarInfo relatedCars={this.state.relatedCars} />
+            <RelatedCarInfo toggleFaq={this.toggleFaq.bind(this)} relatedCars={this.state.relatedCars} faqs={this.state.faqs}/>
           </div>
         </div>
         <Footer />

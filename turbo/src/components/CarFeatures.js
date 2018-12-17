@@ -36,7 +36,7 @@ class CarFeatures extends Component{
         <div className="rq-blog-listing">
           <ul className="nav nav-tabs" role="tablist">
             {this.state.tabs.map((tab,index)=>
-              <li key={index} onClick={()=>this.handleSelectTab(index)}  className={tab.isActive ? "active" : ""}><a href={"#"+tab.id}>{tab.title}</a></li>
+              <li key={index} onClick={()=>this.handleSelectTab(index)}  className={tab.isActive ? "active" : ""}><a href="#">{tab.title}</a></li>
             )}
           </ul>
           <div className="tab-content">

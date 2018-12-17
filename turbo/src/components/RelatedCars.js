@@ -8,7 +8,7 @@ const RelatedCars = ({relatedCars}) => {
         <ul className="nav nav-tabs" role="tablist">
         {relatedCars.map((car,index)=>
           <li key={index}>
-            <a href="#">
+            <a>
               <img src={require("../img/listing-details-tab/tab-image"+car.id+".png")} alt="" />
               <span className="tittle">{car.title}</span>
               <span className="car-des">{car.description}</span>

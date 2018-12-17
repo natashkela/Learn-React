@@ -1,5 +1,4 @@
 import React from 'react';
-import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
 import PropTypes from 'prop-types';
 import 'rc-slider/assets/index.css';
@@ -7,20 +6,6 @@ import FilterByCheckboxDropdown from './FilterByCheckboxDropdown';
 
 const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
-const Handle = Slider.Handle;
-
-const handle = (props) => {
-  const { value, dragging, index, ...restProps } = props;
-  return (
-    <Tooltip
-      overlay={10}
-      placement="top"
-      prefixCls="rc-slider-tooltip"
-    >
-      <Handle value={value} {...restProps} />
-    </Tooltip>
-  );
-};
 
 const FilterCarsBy = ({viewType,viewTypeChange}) => {
   let list = [
