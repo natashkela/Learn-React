@@ -145,7 +145,6 @@ class CarDetail extends Component{
     ReviewComment.current.value="";
   }
   render(){
-    console.log(this);
     return(
       <div className="car-detail">
         <Navbar />
