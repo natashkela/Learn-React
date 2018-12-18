@@ -42,7 +42,7 @@ class CarFeatures extends Component{
           <div className="tab-content">
             <CarFeaturesList features={this.props.car.features} index={0} id="listing_tab_hor_1" isActive={this.state.tabs[0].isActive}/>
             <CarDescription description={this.props.car.description} index={1} id="listing_tab_hor_2" isActive={this.state.tabs[1].isActive}/>
-            <CarReview reviews={this.props.reviews} index={2} id={"listing_tab_hor_3"} isActive={this.state.tabs[2].isActive}/>
+            <CarReview reviews={this.props.reviews} index={2} submitReview={this.props.submitReview} id={"listing_tab_hor_3"} isActive={this.state.tabs[2].isActive}/>
           </div>
         </div>
       </div>
@@ -51,6 +51,7 @@ class CarFeatures extends Component{
 }
 CarFeatures.propTypes={
   car: PropTypes.object,
-  reviews:PropTypes.array
+  reviews:PropTypes.array,
+  submitReview:PropTypes.func
 }
 export default CarFeatures;

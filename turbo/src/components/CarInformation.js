@@ -4,7 +4,7 @@ import CarFeatures from './CarFeatures.js';
 import CarLocation from './CarLocation.js';
 import MainCarFeatures from './MainCarFeatures.js';
 import BreadcrumbSecondary from './BreadcrumbSecondary';
-const CarInformation = ({breadcrumbs,title,car,reviews}) => {
+const CarInformation = ({breadcrumbs,title,car,reviews,submitReview}) => {
   return (
     <div>
       <div className="rq-listing-single">
@@ -35,7 +35,7 @@ const CarInformation = ({breadcrumbs,title,car,reviews}) => {
                             seats={car.seats}
                             luggage={car.luggage}
                             fuel={car.fuel} />
-          <CarFeatures car={car} reviews={reviews}/>
+          <CarFeatures car={car} reviews={reviews} submitReview={submitReview}/>
           <CarLocation car={car} />
         </div>
       </div>
@@ -46,6 +46,7 @@ CarInformation.propTypes={
   breadcrumbs:PropTypes.array,
   title:PropTypes.string,
   car:PropTypes.object,
-  reviews:PropTypes.array
+  reviews:PropTypes.array,
+  submitReview:PropTypes.func
 }
 export default CarInformation;

@@ -133,13 +133,25 @@ class CarDetail extends Component{
   calculateTotalCost(){
     return 150;
   }
+  handleSubmitReview(event,author,stars,comment, ReviewComment){
+    event.preventDefault();
+    if(stars<1){
+      alert("Please select at least one star");
+      return false;
+    }
+    this.setState(prevState=>{
+      return prevState.reviews.push({author:author,stars:stars,comment:comment})
+    })
+    ReviewComment.current.value="";
+  }
   render(){
+    console.log(this);
     return(
       <div className="car-detail">
         <Navbar />
         <div className="rq-page-content">
           <div className="rq-listing-details">
-            <CarInformation breadcrumbs={this.state.breadcrumbs} title={this.state.title} car={this.state.car} reviews={this.state.reviews}/>
+            <CarInformation breadcrumbs={this.state.breadcrumbs} title={this.state.title} car={this.state.car} reviews={this.state.reviews} submitReview={this.handleSubmitReview.bind(this)}/>
             <BookCarSection totalCost={this.calculateTotalCost()}/>
             <RelatedCarInfo toggleFaq={this.toggleFaq.bind(this)} relatedCars={this.state.relatedCars} faqs={this.state.faqs}/>
           </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import WriteCarReview from './WriteCarReview.js';
-const CarReview = ({reviews,id,index,isActive})=>{
+const CarReview = ({reviews,id,index,isActive,submitReview})=>{
   return(
     <div role="tabpanel" className={isActive ? "tab-pane active":"tab-pane"} id={id}>
       {reviews.map((review, index)=>
@@ -20,7 +20,7 @@ const CarReview = ({reviews,id,index,isActive})=>{
           </div>
         </div>
       )}
-      <WriteCarReview />
+      <WriteCarReview submitReview={submitReview}/>
     </div>
   );
 }
@@ -28,6 +28,7 @@ WriteCarReview.propTypes = {
   reviews:PropTypes.array,
   id:PropTypes.string,
   index:PropTypes.number,
-  isActive:PropTypes.bool
+  isActive:PropTypes.bool,
+  submitReview:PropTypes.func
 }
 export default CarReview;
