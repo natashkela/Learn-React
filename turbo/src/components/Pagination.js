@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const CarListingPagination = ({currentPage,previousPage,nextPage,total}) =>{
+const Pagination = ({currentPage,previousPage,nextPage,total}) =>{
   return(
     <div className="rq-pagination">
       <nav>
@@ -24,9 +24,10 @@ const CarListingPagination = ({currentPage,previousPage,nextPage,total}) =>{
     </div>
   );
 }
-CarListingPagination.propTypes = {
+Pagination.propTypes = {
   currentPage: PropTypes.number,
   previousPage: PropTypes.func,
-  nextPage: PropTypes.func
+  nextPage: PropTypes.func,
+  tota:PropTypes.number
 }
-export default CarListingPagination;
+export default Pagination;
