@@ -26,10 +26,7 @@ const CarInformation = ({breadcrumbs,title,car,reviews,submitReview}) => {
       </div>
       <div className="rq-content-block">
         <div className="container">
-          <div className="rq-title-container bredcrumb-title text-center">
-            <h1 className="rq-title light">{title}</h1>
-            <BreadcrumbSecondary breadcrumbs={breadcrumbs}/>
-          </div>
+          <BreadcrumbSecondary title={title} breadcrumbs={breadcrumbs}/>
           <MainCarFeatures mileage={car.mileage}
                             transmission={car.transmission}
                             seats={car.seats}

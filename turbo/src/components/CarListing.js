@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import FilterCarsBy from './FilterCarsBy.js';
 import CarListViewType from './CarListViewType.js';
-import CarListingPagination from './CarListingPagination.js';
+import Pagination from './Pagination.js';
 class CarListing extends Component{
   state={
     list:[
@@ -148,7 +148,7 @@ class CarListing extends Component{
         <FilterCarsBy viewType={this.state.viewType} viewTypeChange={this.handleViewTypeChange.bind(this)}/>
         <div className="rq-car-listing-wrapper">
           <CarListViewType list={this.state.list.slice((this.state.page-1)*this.state.carPerPage,(this.state.carPerPage*this.state.page))} viewType={this.state.viewType}/>
-          <CarListingPagination nextPage={this.handleNextPage.bind(this)} previousPage={this.handlePreviousPage.bind(this)} currentPage={this.state.page} total={this.getTotalPages()} />
+          <Pagination nextPage={this.handleNextPage.bind(this)} previousPage={this.handlePreviousPage.bind(this)} currentPage={this.state.page} total={this.getTotalPages()} />
         </div>
       </div>
     );
