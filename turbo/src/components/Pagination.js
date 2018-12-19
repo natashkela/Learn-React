@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-const Pagination = ({currentPage,previousPage,nextPage,total}) =>{
+const Pagination = ({categoryId, currentPage,previousPage,nextPage,total}) =>{
   return(
     <div className="rq-pagination">
       <nav>
@@ -14,7 +14,7 @@ const Pagination = ({currentPage,previousPage,nextPage,total}) =>{
             }
             {currentPage!=total &&
               <li className="pagin-text">
-                <a href="#" aria-label="Next" onClick={()=>nextPage(currentPage)}>
+                <a href="#" aria-label="Next" onClick={(categoryId==null) ? ()=>nextPage(currentPage) : ()=>nextPage(currentPage,categoryId)}>
                   <span aria-hidden="true">Next <i className="arrow_right"></i></span>
                 </a>
               </li>
@@ -28,6 +28,7 @@ Pagination.propTypes = {
   currentPage: PropTypes.number,
   previousPage: PropTypes.func,
   nextPage: PropTypes.func,
-  tota:PropTypes.number
+  total:PropTypes.number,
+  categoryId:PropTypes.number
 }
 export default Pagination;
