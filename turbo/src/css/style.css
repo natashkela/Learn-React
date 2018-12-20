@@ -25,7 +25,8 @@
 .car-detail .navbar,
 .contact-us .navbar,
 .cars .navbar,
-.blog .navbar{
+.blog .navbar,
+.blog-post .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
@@ -63,4 +64,8 @@ body {
 
 .booking-details .total-price{
   margin-top:100px;
+}
+
+.margin-bottom-40{
+  margin-bottom:40px;
 }
