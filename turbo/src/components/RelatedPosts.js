@@ -39,8 +39,7 @@ const RelatedPosts = ()=> {
           </div>
           <div className="col-md-4">
             <a href="#">
-              <div className="rq-blog-grid-single"
-                   style={{backgroundImage:'url("../img/post-single/related-post3.jpg")',backgroundSize: 'cover',backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
+              <div className="rq-blog-grid-single" style={{backgroundImage:'url("../img/post-single/related-post3.jpg")',backgroundSize: 'cover',backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
                 <div className="rq-overlay"></div>
                 <span className="company-name">discover the awesome land that you should come</span>
                 <div className="rq-listing-meta">
