@@ -45,7 +45,29 @@ class BlogPost extends Component{
        uniqueName:"car-industry-news",
        isActive:false
      }
+   ],
+   blogComments:[
+     {
+       userId:1,
+       author:"Nata Vacheishvili",
+       content:"Comment example here. Nulla risus lacus, vehicula id mi vitae, auctor accumsan nulla. Sed a mi quam. In euismod urna ac massa.",
+       date:"25/07/2018 10:35"
+     },
+     {
+       userId:2,
+       author:"Tiko Vacheishvili",
+       content:"Comment example here. Nulla risus lacus, vehicula id mi vitae, auctor accumsan nulla. Sed a mi quam. In euismod urna ac massa.",
+       date:"25/07/2018 10:30"
+     }
    ]
+  }
+  handleSubmitComment(event,author,comment,userId, Comment){
+    event.preventDefault();
+    console.log(comment);
+    this.setState(prevState=>{
+      return prevState.blogComments.push({author:author,content:comment, userId:userId})
+    })
+    Comment.current.value="";
   }
   render(){
     return(
@@ -61,8 +83,8 @@ class BlogPost extends Component{
                 <BreadcrumbSecondary title={this.state.title} breadcrumbs={this.state.breadcrumbs}/>
                 <BlogPostInformation blog={this.state.blogPost} categories={this.state.blogCategories}/>
                 <BlogPostShare />
+                <BlogPostComments submitComment={this.handleSubmitComment.bind(this)} comments={this.state.blogComments}/>
                 <RelatedPosts />
-                <BlogPostComments />
               </div>
             </div>
           </div>
