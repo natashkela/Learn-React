@@ -12,6 +12,7 @@ import Cars from './Cars';
 import CarDetail from './CarDetail';
 import Blog from './Blog';
 import BlogPost from './BlogPost';
+import Checkout from './Checkout';
 const App = () => (
   <BrowserRouter>
     <div>
@@ -22,6 +23,7 @@ const App = () => (
       <Route path="/car-detail" component={CarDetail} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog-post" component={BlogPost} />
+      <Route path="/checkout" component={Checkout} />
     </div>
   </BrowserRouter>
 );

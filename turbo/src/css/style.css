@@ -26,7 +26,8 @@
 .contact-us .navbar,
 .cars .navbar,
 .blog .navbar,
-.blog-post .navbar{
+.blog-post .navbar,
+.checkout .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;

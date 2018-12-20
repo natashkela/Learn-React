@@ -4,7 +4,7 @@ const BreadcrumbSecondary = ({breadcrumbs,title})=>{
   return(
     <div className="rq-title-container bredcrumb-title text-center">
       <h1 className="rq-title light">{title}</h1>
-      <ol className="breadcrumb secondary rq-subtitle">
+      <ol className="breadcrumb rq-subtitle">
         {breadcrumbs.map((breadcrumb,index)=>
           breadcrumb.href ? <li key={index}><a href={breadcrumb.href}>{breadcrumb.title}</a></li> : <li key={index} className="active">{breadcrumb.title}</li>
         )}
