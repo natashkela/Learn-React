@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 const BlogPostInformation = ({blog,categories})=>{
+  let bgImage = require("../img/post-single/single-post-author.jpg");
   return (
     <div className="blog-post-information">
       <div className="rq-single-post-header row">
         <div className="author-info-content col-md-4">
-          <div className="author-img" style={{backgroundImage:'url("img/post-single/single-post-author.jpg")',backgroundSize: 'cover',backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
+          <div className="author-img" style={{backgroundImage:'url("'+bgImage+'")',backgroundSize: 'cover',backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
           </div>
           <span className="author-name"><a href="#">Author</a></span>
           <span className="author-role">{blog.author}</span>
