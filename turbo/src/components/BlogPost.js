@@ -59,6 +59,26 @@ class BlogPost extends Component{
        content:"Comment example here. Nulla risus lacus, vehicula id mi vitae, auctor accumsan nulla. Sed a mi quam. In euismod urna ac massa.",
        date:"25/07/2018 10:30"
      }
+   ],
+   topThreeRelated:[
+     {
+       id:1,
+       title:"SUCCESSFUL MORE IN CAR RENTAL FIELD 2016",
+       date:"25/02/2018",
+       author:"Nata"
+     },
+     {
+       id:2,
+       title:"SUCCESSFUL MORE IN CAR RENTAL FIELD 2016",
+       date:"25/02/2018",
+       author:"Nata"
+     },
+     {
+       id:3,
+       title:"SUCCESSFUL MORE IN CAR RENTAL FIELD 2016",
+       date:"25/02/2018",
+       author:"Nata"
+     }
    ]
   }
   handleSubmitComment(event,author,comment,userId, Comment){
@@ -84,7 +104,7 @@ class BlogPost extends Component{
                 <BlogPostInformation blog={this.state.blogPost} categories={this.state.blogCategories}/>
                 <BlogPostShare />
                 <BlogPostComments submitComment={this.handleSubmitComment.bind(this)} comments={this.state.blogComments}/>
-                <RelatedPosts />
+                <RelatedPosts relatedPosts={this.state.topThreeRelated}/>
               </div>
             </div>
           </div>
