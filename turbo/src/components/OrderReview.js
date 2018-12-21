@@ -14,7 +14,12 @@ const OrderReview = ({orderReview, index, activePanel, reservedCarShortInfo})=>{
         <div className="panel-body">
           <div className="row">
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-              Car Picture, Owner Picture&Name
+              <img src={require("../img/car-listing-grid/car1.jpg")} alt="" />
+              <div className="author-img" style={{backgroundImage:`url(${require("../img/about-us/about-us-our-team-1.jpg")})`,backgroundSize: 'cover',backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
+              </div>
+              <div className="author-name">
+                <a href="#">{reservedCarShortInfo.author}</a>
+              </div>
             </div>
             <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <div className="row margin-bottom-15">
