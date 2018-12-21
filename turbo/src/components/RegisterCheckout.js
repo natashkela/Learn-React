@@ -23,7 +23,7 @@ const RegisterCheckout = ({isLoggedIn,registerCheckout,index,activePanel}) => {
               <input type="password" name="password" className="rq-form-control reverse" placeholder="Password" required />
             </div>
             <div className="col-md-6">
-              <input type="password" name="re-password" className="rq-form-control reverse" placeholder="Re - Password" required />
+              <input type="password" name="re-password" className="rq-form-control reverse" placeholder="Repeat Password" required />
             </div>
             <div className="col-md-6">
               <input type="text" name="username" className="rq-form-control reverse" placeholder="Username" required />
