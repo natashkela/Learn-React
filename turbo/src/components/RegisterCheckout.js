@@ -44,6 +44,6 @@ RegisterCheckout.propTypes = {
   isLoggedIn: PropTypes.bool,
   registerCheckout: PropTypes.bool,
   index: PropTypes.number,
-  activePanel:PropTypes.bool
+  activePanel:PropTypes.func
 }
 export default RegisterCheckout;

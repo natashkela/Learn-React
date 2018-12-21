@@ -291,6 +291,6 @@ const BillingInformation = ({billingInformation, index, activePanel})=>{
 BillingInformation.propTypes={
   billingInformation:PropTypes.bool,
   index: PropTypes.number,
-  activePanel: PropTypes.bool
+  activePanel: PropTypes.func
 }
 export default BillingInformation;

@@ -49,8 +49,11 @@ class Checkout extends Component {
      author: "Nata Vacheishvili",
      startDate: "25/02/2018",
      endDate: "26/03/2018",
-     carPrice: 15,
-     discountPercent: 10
+     totalCarPrice:150,
+     totalCarDiscountedPrice:135,
+     discountPercent:10,
+     taxes:35,
+     totalPrice:170
    }
  }
   handleActivePanel(panelIndex){

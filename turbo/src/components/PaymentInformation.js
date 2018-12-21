@@ -29,7 +29,7 @@ const PaymentInformation = ({paymentInformation, index,activePanel}) =>{
               <input type="text" name="cvv" className="rq-form-control reverse" placeholder="CVV" required />
             </div>
             <div className="col-md-12">
-              <button type="button" class="rq-btn rq-btn-primary btn-large border-radius">Confirm Payment</button>
+              <button type="button" className="rq-btn rq-btn-primary btn-large border-radius">Confirm Payment</button>
             </div>
           </div>
         </div>
@@ -40,6 +40,6 @@ const PaymentInformation = ({paymentInformation, index,activePanel}) =>{
 PaymentInformation.propTypes = {
   paymentInformation:PropTypes.bool,
   index: PropTypes.number,
-  activePanel: PropTypes.bool
+  activePanel: PropTypes.func
 }
 export default PaymentInformation;
