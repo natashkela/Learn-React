@@ -26,7 +26,8 @@
 .contact-us .navbar,
 .cars .navbar,
 .blog .navbar,
-.blog-post .navbar{
+.blog-post .navbar,
+.checkout .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
@@ -68,4 +69,12 @@ body {
 
 .margin-bottom-40{
   margin-bottom:40px;
+}
+
+.margin-bottom-15{
+  margin-bottom:15px;
+}
+
+.black{
+  color:black;
 }
