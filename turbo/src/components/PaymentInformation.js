@@ -12,7 +12,26 @@ const PaymentInformation = ({paymentInformation, index,activePanel}) =>{
       </div>
       <div id="payment-information" className={paymentInformation ? "panel-collapse collapse in" : "panel-collapse collapse"} role="tabpanel" aria-labelledby="payment-information-heading">
         <div className="panel-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute
+          <div className="row">
+            <div className="col-md-6">
+              <input type="text" name="billing-first-name" className="rq-form-control reverse" placeholder="First Name" required />
+            </div>
+            <div className="col-md-6">
+              <input type="text" name="billing-last-name" className="rq-form-control reverse" placeholder="Last Name" required />
+            </div>
+            <div className="col-md-12">
+              <input type="text" name="credit-card" className="rq-form-control reverse" placeholder="Credit Card Number" required />
+            </div>
+            <div className="col-md-6">
+              <input type="text" name="month-year" className="rq-form-control reverse" placeholder="MM/YY" required />
+            </div>
+            <div className="col-md-6">
+              <input type="text" name="cvv" className="rq-form-control reverse" placeholder="CVV" required />
+            </div>
+            <div className="col-md-12">
+              <button type="button" class="rq-btn rq-btn-primary btn-large border-radius">Confirm Payment</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -33,14 +33,25 @@ class Checkout extends Component {
        isActive:false
      },
      {
-       name:"paymentInformation",
-       isActive:false
-     },
-     {
        name:"orderReview",
        isActive:false
      },
-   ]
+     {
+       name:"paymentInformation",
+       isActive:false
+     }
+   ],
+   reservedCarShortInfo:{
+     id:1,
+     brand:"BMW",
+     model:"X5",
+     year:"2016",
+     author: "Nata Vacheishvili",
+     startDate: "25/02/2018",
+     endDate: "26/03/2018",
+     carPrice: 15,
+     discountPercent: 10
+   }
  }
   handleActivePanel(panelIndex){
     this.setState(prevState=>{
@@ -63,8 +74,8 @@ class Checkout extends Component {
                         <div className="panel-group" id="checkout-accordion" role="tablist" aria-multiselectable="true">
                           {!this.state.isLoggedIn && <RegisterCheckout registerCheckout={this.state.panels[0].isActive} activePanel={this.handleActivePanel.bind(this)} index={0}/>}
                           <BillingInformation billingInformation={this.state.panels[1].isActive} index={1} activePanel={this.handleActivePanel.bind(this)} />
-                          <PaymentInformation paymentInformation={this.state.panels[2].isActive} index={2} activePanel={this.handleActivePanel.bind(this)}/>
-                          <OrderReview orderReview={this.state.panels[3].isActive} index={3} activePanel={this.handleActivePanel.bind(this)}/>
+                          <OrderReview reservedCarShortInfo={this.state.reservedCarShortInfo} orderReview={this.state.panels[2].isActive} index={2} activePanel={this.handleActivePanel.bind(this)}/>
+                          <PaymentInformation paymentInformation={this.state.panels[3].isActive} index={3} activePanel={this.handleActivePanel.bind(this)}/>
                         </div>
                       </div>
                     </div>
