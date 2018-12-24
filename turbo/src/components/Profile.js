@@ -31,6 +31,9 @@ class Profile extends Component{
   handleSelectCountry(val){
     this.setState(prevState=>prevState.profile.country=val);
   }
+  handleSelectCity(val){
+    this.setState(prevState=>prevState.profile.city=val);
+  }
   render(){
     return (
       <div className="my-profile">
@@ -72,7 +75,7 @@ class Profile extends Component{
                         </div>
                         <div className="form-group city">
                           <label htmlFor="location">City</label>
-                          <CityListSelect countrySelected={this.state.profile.country} citySelected={this.state.profile.city} />
+                          <CityListSelect countrySelected={this.state.profile.country} selectRegion={this.state.profile.city} selectCity={this.handleSelectCity.bind(this)}/>
                         </div>
                         <div className="form-group">
                           <label htmlFor="drivers_license">Driver License Number</label>
