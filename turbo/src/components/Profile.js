@@ -2,10 +2,14 @@ import React,{Component} from 'react';
 import Navbar from './Navbar.js';
 import Footer from './Footer.js';
 class Profile extends Component{
+  state = {
+    isLoggedIn:true,
+    hasCar:true
+  }
   render(){
     return (
       <div classNameName="my-profile">
-        <Navbar />
+        <Navbar isLoggedIn={this.state.isLoggedIn} hasCar={this.state.hasCar}/>
         <div className="rq-page-content">
           <div className="inner-page-banner" style={{backgroundImage: "url('../img/inner-banner/about-us.jpg')", backgroundSize: 'cover', backgroundPosition: 'top center', backgroundRepeat: 'no-repeat'}}>
             <div className="rq-overlay"></div>
