@@ -1,6 +1,8 @@
 import React,{Component} from 'react';
 import Navbar from './Navbar.js';
 import Breadcrumb from './Breadcrumb';
+import CountryListSelect from './CountryListSelect';
+import CityListSelect from './CityListSelect';
 import Footer from './Footer.js';
 class Profile extends Component{
   state = {
@@ -17,12 +19,17 @@ class Profile extends Component{
      }
    ],
    profile:{
+     id:1,
+     username:"nvacheishvili",
      email:"nvacheishvili@wpi.edu",
-     country:"Georgia",
+     country:"GE",
      city:"Tbilisi",
      licenseNum:"123456",
      aboutme: "I made this website wohooo"
    }
+  }
+  handleSelectCountry(val){
+    this.setState(prevState=>prevState.profile.country=val);
   }
   render(){
     return (
@@ -43,7 +50,7 @@ class Profile extends Component{
                       <form method="POST" encType="multipart/form-data" id="update_profile" >
                         <input type="hidden" name="action" value="profile-update" />
                         <input type="hidden" name="id" value="1" />
-                        <img src={require("../img/users/1-nvacheishvili.jpg")} style={{width:"200px",height:"200px"}} className="img-responsive" />
+                        <img src={this.state.profile.id && this.state.profile.username ? require("../img/users/"+this.state.profile.id+"-"+this.state.profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"200px",height:"200px"}} className="img-responsive" />
                         <br />
                         <input type="file" className="file" name="preview-image" data-filename-placement="inside" />
                         <br />
@@ -59,13 +66,13 @@ class Profile extends Component{
                           <label htmlFor="re_password">Repeat Password</label>
                           <input type="password" className="form-control" id="re_password" name="re_password" value="" placeholder="" />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group country">
                           <label htmlFor="location">Country</label>
-                          <input type="text" className="form-control" id="country" name="location" value="Tbilisi" placeholder="Georgia" />
+                          <CountryListSelect selected={this.state.profile.country} selectCountry={this.handleSelectCountry.bind(this)} />
                         </div>
-                        <div className="form-group">
+                        <div className="form-group city">
                           <label htmlFor="location">City</label>
-                          <input type="text" className="form-control" id="city" name="location" value="Tbilisi" placeholder="Tbilisi" />
+                          <CityListSelect countrySelected={this.state.profile.country} citySelected={this.state.profile.city} />
                         </div>
                         <div className="form-group">
                           <label htmlFor="drivers_license">Driver License Number</label>

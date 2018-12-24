@@ -92,3 +92,10 @@ body {
   padding: 37px;
   margin-left: 45px;
 }
+
+.country .rq-form-control,
+.city .rq-form-control{
+  margin-bottom:0px;
+  background-color:white;
+  border-radius:6px;
+}
