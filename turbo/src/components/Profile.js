@@ -25,14 +25,40 @@ class Profile extends Component{
      country:"GE",
      city:"Tbilisi",
      licenseNum:"123456",
-     aboutme: "I made this website wohooo"
+     aboutme: "I made this website wohooo",
+     licenseCountry:"GE",
+     password:"",
+     repassword:""
    }
   }
   handleSelectCountry(val){
     this.setState(prevState=>prevState.profile.country=val);
   }
+  handleSelectCountryLicense(val){
+    this.setState(prevState=>prevState.profile.licenseCountry=val);
+  }
   handleSelectCity(val){
     this.setState(prevState=>prevState.profile.city=val);
+  }
+  handleEmailChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.email=value);
+  }
+  handleDriverLicenseNumberChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.licenseNum=value);
+  }
+  handleAboutMeChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.aboutme=value);
+  }
+  handlePasswordChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.password=value);
+  }
+  handleRePasswordChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.repassword=value);
   }
   render(){
     return (
@@ -59,15 +85,15 @@ class Profile extends Component{
                         <br />
                         <div className="form-group">
                           <label htmlFor="email">Email</label>
-                          <input type="text" className="form-control" id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
+                          <input type="text" onChange={this.handleEmailChange.bind(this)} className="form-control" id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="password">Password</label>
-                          <input type="password" className="form-control" id="password" name="password" value="" placeholder="" />
+                          <input type="password" onChange={this.handlePasswordChange.bind(this)} className="form-control" id="password" name="password" value="" placeholder="" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="re_password">Repeat Password</label>
-                          <input type="password" className="form-control" id="re_password" name="re_password" value="" placeholder="" />
+                          <input type="password" onChange={this.handleRePasswordChange.bind(this)} className="form-control" id="re_password" name="re_password" value="" placeholder="" />
                         </div>
                         <div className="form-group country">
                           <label htmlFor="location">Country</label>
@@ -79,12 +105,11 @@ class Profile extends Component{
                         </div>
                         <div className="form-group">
                           <label htmlFor="drivers_license">Driver License Number</label>
-                          <input type="text" className="form-control" id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
+                          <input type="text" onChange={this.handleDriverLicenseNumberChange.bind(this)} className="form-control" id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="aboutme">About me</label>
-                          <textarea className="form-control" rows={5}>
-                             {this. state.profile.aboutme ? this.state.profile.aboutme : ""}
+                          <textarea className="form-control" rows={5} onChange={this.handleAboutMeChange.bind(this)} value={this. state.profile.aboutme ? this.state.profile.aboutme : ""}>
                           </textarea>
                         </div>
                         <button type="submit" className="btni margin-bottom-15 rq-btn rq-btn-primary btn-large border-radius">Save</button>
