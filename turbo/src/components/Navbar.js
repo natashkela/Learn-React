@@ -28,10 +28,10 @@ const Navbar = ({isLoggedIn,hasCar}) => {
                   </li>
                 }
             {isLoggedIn &&
-                  <li class="dropdown">
-                    <a href="how-turbo-works.php" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                                                                   aria-haspopup="true" aria-expanded="false">Learn More <span class="ion-chevron-down"></span></a>
-                    <ul class="dropdown-menu">
+                  <li className="dropdown">
+                    <a href="how-turbo-works.php" className="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                                                                   aria-haspopup="true" aria-expanded="false">Learn More <span className="ion-chevron-down"></span></a>
+                    <ul className="dropdown-menu">
                       <li><a href="how-turbo-works.php">How does Turbo work?</a></li>
                         <li><a href="rent-a-car.php">Rent Car</a></li>
                           <li><a href="make-money.php">Rent Out Car</a></li>
@@ -39,10 +39,10 @@ const Navbar = ({isLoggedIn,hasCar}) => {
                   </li>
                 }
                 {isLoggedIn &&
-                  <li class="dropdown">
-                    <a href="./my-profile.php" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                                                                                       aria-haspopup="true" aria-expanded="false">My Profile<span class="ion-chevron-down"></span></a>
-                    <ul class="dropdown-menu">
+                  <li className="dropdown">
+                    <a href="./my-profile.php" className="dropdown-toggle" data-toggle="dropdown" role="button"
+                                                                                       aria-haspopup="true" aria-expanded="false">My Profile<span className="ion-chevron-down"></span></a>
+                    <ul className="dropdown-menu">
                       <li><a href="./my-profile.php">Profile</a></li>
                       {hasCar && <li><a href="./my-account.php">Listed Car</a></li> }
                       <li><a href="./history.php">History</a></li>
