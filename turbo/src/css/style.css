@@ -27,7 +27,8 @@
 .cars .navbar,
 .blog .navbar,
 .blog-post .navbar,
-.checkout .navbar{
+.checkout .navbar,
+.my-profile .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
