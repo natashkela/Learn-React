@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "all-the-cities": "^2.0.1",
     "google-maps-react": "^2.0.2",
     "prop-types": "^15.6.2",
     "rc-slider": "^8.6.4",
     "react": "^16.6.3",
+    "react-country-region-selector": "^1.4.3",
     "react-countup": "^4.0.0",
     "react-dom": "^16.6.3",
     "react-router": "^4.3.1",
