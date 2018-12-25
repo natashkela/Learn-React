@@ -69,19 +69,32 @@ body {
   margin-top:100px;
 }
 
+.margin-top-0{
+  margin-top:0;
+}
+
+.margin-top-10{
+  margin-top:10px;
+}
+
 .margin-top-15{
   margin-top:15px;
 }
+
 .margin-top-30{
   margin-top:30px;
 }
 
-.margin-bottom-40{
-  margin-bottom:40px;
+.margin-bottom-0{
+  margin-bottom:0;
 }
 
 .margin-bottom-15{
   margin-bottom:15px;
+}
+
+.margin-bottom-40{
+  margin-bottom:40px;
 }
 
 .black{
@@ -105,7 +118,12 @@ body {
 .city .rq-form-control{
   margin-bottom:0px;
   background-color:white;
-  border-radius:6px;
+  border-color:#ccc;
+}
+
+.country .rq-form-control:focus,
+.city .rq-form-control:focus{
+  border-color:#000;
 }
 
 .alert-danger {
@@ -119,4 +137,18 @@ body {
     padding: .75rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+}
+
+.list-your-car-general-info .col-xs-12{
+  margin-top:40px;
+}
+.list-your-car-general-info .col-xs-12:first-child,
+.list-your-car-general-info .col-xs-12:nth-child(2){
+  margin-top:10px;
+}
+
+@media (max-width:767px){
+  .list-your-car-general-info .col-xs-12{
+    margin-top:10px!important;
+  }
 }

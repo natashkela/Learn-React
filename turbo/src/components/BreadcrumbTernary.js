@@ -15,7 +15,7 @@ const BreadcrumbTernary = ({title, description,breadcrumbs}) =>{
       <div className="container margin-top-30">
         <div className="text-center">
           {descriptionArray.map((sentence,index)=>
-            <span>{sentence}<br /></span>
+            <span key={index}>{sentence}<br /></span>
           )}
         </div>
       </div>
