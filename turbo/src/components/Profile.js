@@ -29,7 +29,8 @@ class Profile extends Component{
      licenseCountry:"GE",
      password:"",
      repassword:""
-   }
+   },
+   errorLog:[]
   }
   handleSelectCountry(val){
     this.setState(prevState=>prevState.profile.country=val);
@@ -54,10 +55,18 @@ class Profile extends Component{
   }
   handlePasswordChange(val){
     let value = val.target.value;
+    console.log(value);
     this.setState(prevState=>prevState.profile.password=value);
   }
   handleRePasswordChange(val){
     let value = val.target.value;
+    if(this.state.profile.password!=value&&(!this.state.errorLog.includes("Passwords Do Not Match"))){
+      this.setState(prevState=>prevState.errorLog.push("Passwords Do Not Match"));
+    }
+    else if(this.state.profile.password==value){
+      let index = this.state.errorLog.indexOf("Passwords Do Not Match");
+      this.setState(prevState=>prevState.errorLog.splice(index,1));
+    }
     this.setState(prevState=>prevState.profile.repassword=value);
   }
   render(){
@@ -76,6 +85,13 @@ class Profile extends Component{
                       <div className="title">
                         <h3 className="elements-title">Update Profile Information</h3>
                       </div>
+                      {this.state.errorLog.length>0 &&
+                      <div className="alert alert-danger margin-bottom-15" role="alert">
+                        {this.state.errorLog.map((error,index)=>
+                          <span key={index}>{error}</span>
+                        )}
+                        </div>
+                      }
                       <form method="POST" encType="multipart/form-data" id="update_profile" >
                         <input type="hidden" name="action" value="profile-update" />
                         <input type="hidden" name="id" value="1" />
@@ -89,11 +105,11 @@ class Profile extends Component{
                         </div>
                         <div className="form-group">
                           <label htmlFor="password">Password</label>
-                          <input type="password" onChange={this.handlePasswordChange.bind(this)} className="form-control" id="password" name="password" value="" placeholder="" />
+                          <input type="password" onChange={this.handlePasswordChange.bind(this)} className="form-control" id="password" name="password" value={this.state.profile.password ? this.state.profile.password : ""} placeholder="" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="re_password">Repeat Password</label>
-                          <input type="password" onChange={this.handleRePasswordChange.bind(this)} className="form-control" id="re_password" name="re_password" value="" placeholder="" />
+                          <input type="password" onChange={this.handleRePasswordChange.bind(this)} className="form-control" id="re_password" name="re_password" value={this.state.profile.repassword ? this.state.profile.repassword : ""} placeholder="" />
                         </div>
                         <div className="form-group country">
                           <label htmlFor="location">Country</label>
