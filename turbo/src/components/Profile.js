@@ -25,14 +25,49 @@ class Profile extends Component{
      country:"GE",
      city:"Tbilisi",
      licenseNum:"123456",
-     aboutme: "I made this website wohooo"
-   }
+     aboutme: "I made this website wohooo",
+     licenseCountry:"GE",
+     password:"",
+     repassword:""
+   },
+   errorLog:[]
   }
   handleSelectCountry(val){
     this.setState(prevState=>prevState.profile.country=val);
   }
+  handleSelectCountryLicense(val){
+    this.setState(prevState=>prevState.profile.licenseCountry=val);
+  }
   handleSelectCity(val){
     this.setState(prevState=>prevState.profile.city=val);
+  }
+  handleEmailChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.email=value);
+  }
+  handleDriverLicenseNumberChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.licenseNum=value);
+  }
+  handleAboutMeChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.aboutme=value);
+  }
+  handlePasswordChange(val){
+    let value = val.target.value;
+    console.log(value);
+    this.setState(prevState=>prevState.profile.password=value);
+  }
+  handleRePasswordChange(val){
+    let value = val.target.value;
+    if(this.state.profile.password!=value&&(!this.state.errorLog.includes("Passwords Do Not Match"))){
+      this.setState(prevState=>prevState.errorLog.push("Passwords Do Not Match"));
+    }
+    else if(this.state.profile.password==value){
+      let index = this.state.errorLog.indexOf("Passwords Do Not Match");
+      this.setState(prevState=>prevState.errorLog.splice(index,1));
+    }
+    this.setState(prevState=>prevState.profile.repassword=value);
   }
   render(){
     return (
@@ -50,6 +85,13 @@ class Profile extends Component{
                       <div className="title">
                         <h3 className="elements-title">Update Profile Information</h3>
                       </div>
+                      {this.state.errorLog.length>0 &&
+                      <div className="alert alert-danger margin-bottom-15" role="alert">
+                        {this.state.errorLog.map((error,index)=>
+                          <span key={index}>{error}</span>
+                        )}
+                        </div>
+                      }
                       <form method="POST" encType="multipart/form-data" id="update_profile" >
                         <input type="hidden" name="action" value="profile-update" />
                         <input type="hidden" name="id" value="1" />
@@ -59,15 +101,15 @@ class Profile extends Component{
                         <br />
                         <div className="form-group">
                           <label htmlFor="email">Email</label>
-                          <input type="text" className="form-control" id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
+                          <input type="text" onChange={this.handleEmailChange.bind(this)} className="form-control" id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="password">Password</label>
-                          <input type="password" className="form-control" id="password" name="password" value="" placeholder="" />
+                          <input type="password" onChange={this.handlePasswordChange.bind(this)} className="form-control" id="password" name="password" value={this.state.profile.password ? this.state.profile.password : ""} placeholder="" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="re_password">Repeat Password</label>
-                          <input type="password" className="form-control" id="re_password" name="re_password" value="" placeholder="" />
+                          <input type="password" onChange={this.handleRePasswordChange.bind(this)} className="form-control" id="re_password" name="re_password" value={this.state.profile.repassword ? this.state.profile.repassword : ""} placeholder="" />
                         </div>
                         <div className="form-group country">
                           <label htmlFor="location">Country</label>
@@ -79,12 +121,11 @@ class Profile extends Component{
                         </div>
                         <div className="form-group">
                           <label htmlFor="drivers_license">Driver License Number</label>
-                          <input type="text" className="form-control" id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
+                          <input type="text" onChange={this.handleDriverLicenseNumberChange.bind(this)} className="form-control" id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="aboutme">About me</label>
-                          <textarea className="form-control" rows={5}>
-                             {this. state.profile.aboutme ? this.state.profile.aboutme : ""}
+                          <textarea className="form-control" rows={5} onChange={this.handleAboutMeChange.bind(this)} value={this. state.profile.aboutme ? this.state.profile.aboutme : ""}>
                           </textarea>
                         </div>
                         <button type="submit" className="btni margin-bottom-15 rq-btn rq-btn-primary btn-large border-radius">Save</button>
