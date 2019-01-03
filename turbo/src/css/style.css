@@ -114,15 +114,13 @@ body {
   margin-left: 45px;
 }
 
-.country .rq-form-control,
-.city .rq-form-control{
+.select-transparent .rq-form-control{
   margin-bottom:0px;
   background-color:white;
   border-color:#ccc;
 }
 
-.country .rq-form-control:focus,
-.city .rq-form-control:focus{
+.select-transparent .rq-form-control:focus{
   border-color:#000;
 }
 
@@ -145,6 +143,14 @@ body {
 .list-your-car-general-info .col-xs-12:first-child,
 .list-your-car-general-info .col-xs-12:nth-child(2){
   margin-top:10px;
+}
+
+.list-your-car-general-info .row{
+  border-bottom:1px solid #ccc;
+}
+
+.list-your-car-general-info{
+  min-height:500px;
 }
 
 @media (max-width:767px){

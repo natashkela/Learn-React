@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "all-the-cities": "^2.0.1",
+    "car-query": "^1.0.8",
     "google-maps-react": "^2.0.2",
     "prop-types": "^15.6.2",
     "rc-slider": "^8.6.4",
