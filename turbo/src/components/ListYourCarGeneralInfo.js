@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import CountryListSelect from './CountryListSelect';
 import CityListSelect from './CityListSelect';
-import Map from './Map';
 class ListYourCarGeneralInfo extends Component {
   state={
     carLocationCountry:"",
@@ -53,6 +52,10 @@ class ListYourCarGeneralInfo extends Component {
               <option>Car Trim</option>
             </select>
           </div>
+          <label>
+            <input type="checkbox" className="rq-form-control width-auto margin-right-5" />
+            I have an insurance policty that covers commercial rental transaction
+          </label>
         </div>
       </div>
     )
