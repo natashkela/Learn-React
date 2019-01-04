@@ -25,7 +25,8 @@ class ListYourCarTabContent extends Component{
       }
     ]
   }
-  handleTabClick(name){
+  handleTabClick(event,name){
+    event.preventDefault();
     this.setState(prevState=>
       prevState.tabs.map((tab,index)=>
           tab.isActive = (tab.uniqueName==name)
@@ -40,7 +41,7 @@ class ListYourCarTabContent extends Component{
             <div id="elements-menu">
               <ul className="nav nav-stacked rq-elements-menu">
                 {this.state.tabs.map((tab,index)=>
-                  <li onClick={() => this.handleTabClick(tab.uniqueName)} key={index} className={tab.isActive ? "active" : ""}><a href={"#"+tab.uniqueName}>{tab.title}</a></li>
+                  <li onClick={(event) => this.handleTabClick(event,tab.uniqueName)} key={index} className={tab.isActive ? "active" : ""}><a href={"#"+tab.uniqueName}>{tab.title}</a></li>
                 )}
               </ul>
             </div>

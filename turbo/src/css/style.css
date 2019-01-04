@@ -149,15 +149,23 @@ body {
   margin-top:40px;
 }
 .list-your-car-general-info .col-xs-12:first-child,
-.list-your-car-general-info .col-xs-12:nth-child(2){
+.list-your-car-general-info .col-xs-12:nth-child(2),
+.list-your-car-details .col-xs-12:first-child,
+.list-your-car-details .col-xs-12:nth-child(2){
   margin-top:10px;
 }
 
-.list-your-car-general-info .row{
+.list-your-car-general-info .row,
+.list-your-car-details .row{
   border-bottom:1px solid #ccc;
 }
 
-.list-your-car-general-info{
+.list-your-car-details .col-xs-12.feature{
+  margin-top:10px;
+}
+
+.list-your-car-general-info.
+.list-your-car-details{
   min-height:500px;
 }
 
