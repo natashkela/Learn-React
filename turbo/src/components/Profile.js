@@ -97,19 +97,19 @@ class Profile extends Component{
                         <input type="hidden" name="id" value="1" />
                         <img src={this.state.profile.id && this.state.profile.username ? require("../img/users/"+this.state.profile.id+"-"+this.state.profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"200px",height:"200px"}} className="img-responsive" />
                         <br />
-                        <input type="file" className="file" name="preview-image" data-filename-placement="inside" />
+                        <input type="file" className="file rq-form-control" name="preview-image" data-filename-placement="inside" />
                         <br />
                         <div className="form-group">
                           <label htmlFor="email">Email</label>
-                          <input type="text" onChange={this.handleEmailChange.bind(this)} className="form-control" id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
+                          <input type="text" className="rq-form-control" onChange={this.handleEmailChange.bind(this)}  id="email" name="email" value={this.state.profile.email ? this.state.profile.email : ""} placeholder="Jane Doe" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="password">Password</label>
-                          <input type="password" onChange={this.handlePasswordChange.bind(this)} className="form-control" id="password" name="password" value={this.state.profile.password ? this.state.profile.password : ""} placeholder="" />
+                          <input type="password" className="rq-form-control" onChange={this.handlePasswordChange.bind(this)}  id="password" name="password" value={this.state.profile.password ? this.state.profile.password : ""} placeholder="" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="re_password">Repeat Password</label>
-                          <input type="password" onChange={this.handleRePasswordChange.bind(this)} className="form-control" id="re_password" name="re_password" value={this.state.profile.repassword ? this.state.profile.repassword : ""} placeholder="" />
+                          <input type="password" className="rq-form-control" onChange={this.handleRePasswordChange.bind(this)}  id="re_password" name="re_password" value={this.state.profile.repassword ? this.state.profile.repassword : ""} placeholder="" />
                         </div>
                         <div className="form-group country">
                           <label htmlFor="location">Country</label>
@@ -121,11 +121,11 @@ class Profile extends Component{
                         </div>
                         <div className="form-group">
                           <label htmlFor="drivers_license">Driver License Number</label>
-                          <input type="text" onChange={this.handleDriverLicenseNumberChange.bind(this)} className="form-control" id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
+                          <input type="text" className="rq-form-control" onChange={this.handleDriverLicenseNumberChange.bind(this)}  id="drivers_license" name="drivers_license" value={this.state.profile.licenseNum ? this.state.profile.licenseNum : ""} placeholder="License Number" />
                         </div>
                         <div className="form-group">
                           <label htmlFor="aboutme">About me</label>
-                          <textarea className="form-control" rows={5} onChange={this.handleAboutMeChange.bind(this)} value={this. state.profile.aboutme ? this.state.profile.aboutme : ""}>
+                          <textarea className="rq-form-control"  rows={5} onChange={this.handleAboutMeChange.bind(this)} value={this. state.profile.aboutme ? this.state.profile.aboutme : ""}>
                           </textarea>
                         </div>
                         <button type="submit" className="btni margin-bottom-15 rq-btn rq-btn-primary btn-large border-radius">Save</button>

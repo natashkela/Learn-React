@@ -28,7 +28,8 @@
 .blog .navbar,
 .blog-post .navbar,
 .checkout .navbar,
-.my-profile .navbar{
+.my-profile .navbar,
+.list-your-car .navbar{
   position: sticky;
   top: 0px;
   z-index: 40;
@@ -68,12 +69,44 @@ body {
   margin-top:100px;
 }
 
-.margin-bottom-40{
-  margin-bottom:40px;
+.width-auto{
+  width:auto;
+}
+
+.margin-top-0{
+  margin-top:0;
+}
+
+.margin-top-5{
+  margin-top:5px;
+}
+
+.margin-top-10{
+  margin-top:10px;
+}
+
+.margin-top-15{
+  margin-top:15px;
+}
+
+.margin-top-30{
+  margin-top:30px;
+}
+
+.margin-right-5{
+  margin-right:5px!important;
+}
+
+.margin-bottom-0{
+  margin-bottom:0;
 }
 
 .margin-bottom-15{
   margin-bottom:15px;
+}
+
+.margin-bottom-40{
+  margin-bottom:40px;
 }
 
 .black{
@@ -93,11 +126,14 @@ body {
   margin-left: 45px;
 }
 
-.country .rq-form-control,
-.city .rq-form-control{
+.select-transparent .rq-form-control{
   margin-bottom:0px;
   background-color:white;
-  border-radius:6px;
+  border-color:#ccc;
+}
+
+.select-transparent .rq-form-control:focus{
+  border-color:#000;
 }
 
 .alert-danger {
@@ -111,4 +147,39 @@ body {
     padding: .75rem 1.25rem;
     border: 1px solid transparent;
     border-radius: .25rem;
+}
+
+.list-your-car-general-info .col-xs-12{
+  margin-top:40px;
+}
+.list-your-car-general-info .col-xs-12:first-child,
+.list-your-car-general-info .col-xs-12:nth-child(2),
+.list-your-car-details .col-xs-12:first-child,
+.list-your-car-details .col-xs-12:nth-child(2){
+  margin-top:10px;
+}
+
+.list-your-car-general-info .row,
+.list-your-car-details .row{
+  border-bottom:1px solid #ccc;
+}
+
+.list-your-car-details .col-xs-12.feature{
+  margin-top:10px;
+}
+
+.list-your-car-general-info.
+.list-your-car-details{
+  min-height:500px;
+}
+
+span.more-info{
+  font-weight: 600;
+  color: black;
+}
+
+@media (max-width:767px){
+  .list-your-car-general-info .col-xs-12{
+    margin-top:10px!important;
+  }
 }
