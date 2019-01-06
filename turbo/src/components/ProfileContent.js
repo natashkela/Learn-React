@@ -4,13 +4,15 @@ import MyProfile from './MyProfile';
 const ProfileContent = ({tab, profile, errorLog, profileEmailChange, profilePasswordChange,
                     profileRePasswordChange, profileSelectedCountryChange,
                     profileSelectedCityChange, profileDriversLicenseChange,
-                    profileAboutMeChange}) => {
+                    profileAboutMeChange, profileFirstNameChange, profileLastNameChange}) => {
   return (
     <div>
       {tab.uniqueName == "profile" &&
         <MyProfile
             profile={profile}
             errorLog={errorLog}
+            profileFirstNameChange={profileFirstNameChange}
+            profileLastNameChange={profileLastNameChange}
             profileEmailChange={profileEmailChange}
             profilePasswordChange={profilePasswordChange}
             profileRePasswordChange={profileRePasswordChange}
@@ -26,6 +28,8 @@ ProfileContent.propTypes = {
   tab: PropTypes.object,
   profile: PropTypes.object,
   errorLog: PropTypes.array,
+  profileFirstNameChange: PropTypes.func,
+  profileLastNameChange: PropTypes.func,
   profileEmailChange: PropTypes.func,
   profilePasswordChange: PropTypes.func,
   profileRePasswordChange: PropTypes.func,

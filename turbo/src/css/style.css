@@ -207,6 +207,11 @@ span.more-info{
   width:400px!important;
 }
 
+.profile-phone-number{
+  padding: 26px;
+  width: 100%!important;
+}
+
 .dropdown-item {
     display: block;
     width: 100%;
@@ -218,6 +223,10 @@ span.more-info{
     white-space: nowrap;
     background-color: transparent;
     border: 0;
+}
+
+.region-select-profile{
+  height:56px!important;
 }
 
 .list-your-car-xs-navigation .active,

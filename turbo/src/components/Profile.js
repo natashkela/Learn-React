@@ -20,6 +20,10 @@ class Profile extends Component{
    description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, ipsum dolor sit amet, consectetur adipiscing elit. Mauris laoreet dolor vel ex aliquet tincidunt.",
    profile:{
      id:1,
+     firstName:"Nata",
+     lastName:"Vacheishvili",
+     phone:"+17742320539",
+     phoneCountry: "usa",
      username:"nvacheishvili",
      email:"nvacheishvili@wpi.edu",
      country:"GE",
@@ -53,6 +57,14 @@ class Profile extends Component{
     let value = val.target.value;
     this.setState(prevState=>prevState.profile.aboutme=value);
   }
+  handleFirstNameChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.firstName=value);
+  }
+  handleLastNameChange(val){
+    let value = val.target.value;
+    this.setState(prevState=>prevState.profile.lastName=value);
+  }
   handlePasswordChange(val){
     let value = val.target.value;
     console.log(value);
@@ -79,6 +91,8 @@ class Profile extends Component{
               errorLog={this.state.errorLog}
               profile={this.state.profile}
               isLoggedIn={this.state.isLoggedIn}
+              profileFirstNameChange={this.handleFirstNameChange.bind(this)}
+              profileLastNameChange={this.handleLastNameChange.bind(this)}
               profileEmailChange={this.handleEmailChange.bind(this)}
               profilePasswordChange={this.handlePasswordChange.bind(this)}
               profileRePasswordChange={this.handleRePasswordChange.bind(this)}

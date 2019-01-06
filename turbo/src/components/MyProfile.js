@@ -2,7 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import CountryListSelect from './CountryListSelect';
 import CityListSelect from './CityListSelect';
-const MyProfile = ({profile,errorLog, profileEmailChange, profilePasswordChange,
+import ReactPhoneInput from 'react-phone-input-2';
+const MyProfile = ({profile,errorLog, profileFirstNameChange, profileLastNameChange, profileEmailChange, profilePasswordChange,
                     profileRePasswordChange, profileSelectedCountryChange,
                     profileSelectedCityChange, profileDriversLicenseChange,
                     profileAboutMeChange}) => {
@@ -13,49 +14,49 @@ const MyProfile = ({profile,errorLog, profileEmailChange, profilePasswordChange,
         <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           {errorLog.length>0 &&
           <div className="alert alert-danger margin-bottom-15" role="alert">
-            {this.state.errorLog.map((error,index)=>
+            {errorLog.map((error,index)=>
               <span key={index}>{error}</span>
             )}
             </div>
           }
-          <form method="POST" encType="multipart/form-data" id="update_profile" >
-            <input type="hidden" name="action" value="profile-update" />
-            <input type="hidden" name="id" value="1" />
-            <img src={profile.id && profile.username ? require("../img/users/"+profile.id+"-"+profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"200px",height:"200px"}} className="img-responsive" />
-            <br />
-            <input type="file" className="file rq-form-control" name="preview-image" data-filename-placement="inside" />
-            <br />
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="text" className="rq-form-control" onChange={()=>profileEmailChange()}  id="email" name="email" value={profile.email ? profile.email : ""} placeholder="Jane Doe" />
+          <div className="col-xs-12 col-sm-12 col-lg-12 col-md-12">
+            <div>
+              <img src={profile.id && profile.username ? require("../img/users/"+profile.id+"-"+profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"100px",height:"100px", borderRadius:"50%"}} className=" margin-top-15 img-responsive" />
+              <button className="margin-left-60 rq-btn rq-btn-secondary">Upload Photo </button>
+              <p className="margin-top-10">Adding a photo helps hosts recognize each other when picking the car up</p>
             </div>
-            <div className="form-group">
-              <label htmlFor="password">Password</label>
-              <input type="password" className="rq-form-control" onChange={()=>profilePasswordChange()}  id="password" name="password" value={profile.password ? profile.password : ""} placeholder="" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="re_password">Repeat Password</label>
-              <input type="password" className="rq-form-control" onChange={()=>profileRePasswordChange()}  id="re_password" name="re_password" value={profile.repassword ? profile.repassword : ""} placeholder="" />
-            </div>
-            <div className="form-group country">
-              <label htmlFor="location">Country</label>
-              <CountryListSelect selected={profile.country} selectCountry={()=>profileSelectedCountryChange()} />
-            </div>
-            <div className="form-group city">
-              <label htmlFor="location">City</label>
-              <CityListSelect countrySelected={profile.country} selectRegion={profile.city} selectCity={()=>profileSelectedCityChange()}/>
-            </div>
-            <div className="form-group">
-              <label htmlFor="drivers_license">Driver License Number</label>
-              <input type="text" className="rq-form-control" onChange={()=>profileDriversLicenseChange()}  id="drivers_license" name="drivers_license" value={profile.licenseNum ? profile.licenseNum : ""} placeholder="License Number" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="aboutme">About me</label>
-              <textarea className="rq-form-control"  rows={5} onChange={()=>profileAboutMeChange()} value={profile.aboutme ? profile.aboutme : ""}>
-              </textarea>
-            </div>
-            <button type="submit" className="btni margin-bottom-15 rq-btn rq-btn-primary btn-large border-radius">Save</button>
-          </form>
+          </div>
+          <div className="col-md-6">
+            <input type="text" name="first-name" className="rq-form-control" onChange={(e)=>profileFirstNameChange(e)} id="firstName" name="firstName" value={profile.firstName ? profile.firstName : ""} placeholder="First Name" required />
+          </div>
+          <div className="col-md-6">
+            <input type="text" name="last-name" className="rq-form-control" onChange={(e)=>profileLastNameChange(e)} id="lastName" name="lastName" value={profile.lastName ? profile.lastName : ""} placeholder="Last Name" required />
+          </div>
+          <div className="col-md-6">
+            <input type="password" name="password" className="rq-form-control" onChange={(e)=>profilePasswordChange(e)}  id="password" name="password" value={profile.password ? profile.password : ""} placeholder="Password" required />
+          </div>
+          <div className="col-md-6">
+            <input type="password" name="re-password" className="rq-form-control" onChange={(e)=>profileRePasswordChange(e)}  id="repassword" value={profile.repassword ? profile.repassword : ""} placeholder="Repeat Password" required />
+          </div>
+          <div className="col-md-6">
+              <ReactPhoneInput inputClass="profile-phone-number" defaultCountry={profile.phoneCountry ? profile.phoneCountry : 'ge'} value={profile.phone ? profile.phone : ""} />
+          </div>
+          <div className="col-md-6">
+            <input type="email" name="email" className="rq-form-control" onChange={()=>profileEmailChange()}  id="email" name="email" value={profile.email ? profile.email : ""} placeholder="Email Address" required />
+          </div>
+          <div className="col-md-6">
+            <input type="text" className="rq-form-control" onChange={()=>profileDriversLicenseChange()}  id="drivers_license" name="drivers_license" value={profile.licenseNum ? profile.licenseNum : ""} placeholder="License Number" />
+          </div>
+          <div className="col-md-6">
+            <CountryListSelect className="region-select-profile" selected={profile.country} selectCountry={()=>profileSelectedCountryChange()} />
+          </div>
+          <div className="col-md-6">
+            <CityListSelect className="region-select-profile" countrySelected={profile.country} selectRegion={profile.city} selectCity={()=>profileSelectedCityChange()}/>
+          </div>
+          <div className="col-md-12">
+            <textarea className="rq-form-control" placeholder="About me" rows={5} onChange={()=>profileAboutMeChange()} value={profile.aboutme ? profile.aboutme : ""}>
+            </textarea>
+          </div>
         </div>
       </div>
     </div>
@@ -64,6 +65,8 @@ const MyProfile = ({profile,errorLog, profileEmailChange, profilePasswordChange,
 MyProfile.propTypes= {
   profile:PropTypes.object,
   errorLog: PropTypes.array,
+  profileFirstNameChange: PropTypes.func,
+  profileLastNameChange: PropTypes.func,
   profileEmailChange: PropTypes.func,
   profilePasswordChange: PropTypes.func,
   profileRePasswordChange: PropTypes.func,

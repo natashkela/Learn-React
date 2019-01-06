@@ -107,6 +107,8 @@ class ProfileTabContent extends Component{
                       tab={tab}
                       profile={this.props.profile}
                       isLoggedIn={this.props.isLoggedIn}
+                      profileFirstNameChange={this.props.profileFirstNameChange}
+                      profileLastNameChange={this.props.profileLastNameChange}
                       profileEmailChange={this.props.profileEmailChange}
                       profilePasswordChange={this.props.profilePasswordChange}
                       profileRePasswordChange={this.props.profileRePasswordChange}
@@ -128,6 +130,8 @@ ProfileTabContent.propTypes = {
   customerInformation: PropTypes.object,
   errorLog: PropTypes.array,
   profile: PropTypes.object,
+  profileFirstNameChange: PropTypes.func,
+  profileLastNameChange: PropTypes.func,
   profileEmailChange: PropTypes.func,
   profilePasswordChange: PropTypes.func,
   profileRePasswordChange: PropTypes.func,
