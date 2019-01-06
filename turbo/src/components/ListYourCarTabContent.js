@@ -9,6 +9,16 @@ class ListYourCarTabContent extends Component{
         uniqueName:"general-info"
       },
       {
+        title:"Profile Photo",
+        isActive:false,
+        uniqueName:"profile-photo"
+      },
+      {
+        title:"Mobile Number",
+        isActive:false,
+        uniqueName:"mobile-number"
+      },
+      {
         title:"Car Details",
         isActive: false,
         uniqueName:"car-details"
@@ -23,7 +33,13 @@ class ListYourCarTabContent extends Component{
         isActive: false,
         uniqueName:"car-photos"
       }
-    ]
+    ],
+    isLoggedIn:true,
+    customerInformation:{
+      firstName: "Nata",
+      lastName: "Vacheishvili",
+      phone:"7742320539"
+    }
   }
   handleTabClick(event,name){
     event.preventDefault();
@@ -49,7 +65,7 @@ class ListYourCarTabContent extends Component{
           <div className="col-xs-6 col-sm-6 col-md-9 col-lg-9">
             {this.state.tabs.map((tab,index)=>
               <div key={index} id={tab.uniqueName} className={tab.isActive ? "active" : "hidden"}>
-                <ListYourCarContent tab={tab}/>
+                <ListYourCarContent tab={tab} isLoggedIn={this.state.isLoggedIn} customerInformation={this.state.customerInformation}/>
               </div>
             )}
           </div>
