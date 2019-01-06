@@ -53,10 +53,12 @@ class ListYourCarGeneralInfo extends Component {
               <option>Car Trim</option>
             </select>
           </div>
-          <label>
-            <input type="checkbox" className="rq-form-control width-auto margin-right-5" />
-            I have an insurance policty that covers commercial rental transaction
-          </label>
+          <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <label>
+              <input type="checkbox" className="rq-form-control width-auto margin-right-5" />
+              I have an insurance policty that covers commercial rental transaction
+            </label>
+          </div>
         </div>
       </div>
     )

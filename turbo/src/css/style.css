@@ -117,6 +117,14 @@ body {
   margin-bottom:40px;
 }
 
+.margin-left-5{
+  margin-left:5px;
+}
+
+.margin-left-60{
+  margin-left:60px;
+}
+
 .black{
   color:black;
 }
@@ -194,8 +202,51 @@ span.more-info{
   color: black;
 }
 
+.phone-number-input{
+  height:50px!important;
+  width:400px!important;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 10px 40px;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+
+.list-your-car-xs-navigation .active,
+.dropdown-item:hover{
+  color:white;
+  background-color:#efa80f;
+}
+
 @media (max-width:767px){
   .list-your-car-general-info .col-xs-12{
     margin-top:10px!important;
   }
+  .list-your-car-general-info .col-xs-12:first-child,
+  .list-your-car-general-info .col-xs-12:nth-child(2),
+  .list-your-car-details .col-xs-12:first-child,
+  .list-your-car-details .col-xs-12:nth-child(2){
+    margin-top:10px!important;
+  }
+  .list-your-car .rq-form-control{
+    margin-bottom:15px;
+  }
+
+  .list-your-car-general-info .row,
+  .list-your-car-details .row{
+    border:none;
+  }
+
+  .information-box{
+    margin-top:20px;
+  }
+
 }
