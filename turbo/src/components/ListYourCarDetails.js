@@ -77,7 +77,7 @@ class ListYourCarDetails extends Component {
           </div>
         </div>
         <h5 className="margin-top-25 margin-bottom-0"><strong>Car Information</strong></h5>
-        <div className="row margin-bottom-40">
+        <div className="row no-border margin-bottom-40">
           {
             this.state.features.map((feature,index)=>
                 <div key={index} className={index!=this.state.features.length-1 ? "feature col-xs-12 col-sm-12 col-md-4 col-lg-4" : "feature col-xs-12 col-sm-12 col-md-4 col-lg-4 margin-bottom-40"}>

@@ -32,7 +32,7 @@ class ListYourCarGeneralInfo extends Component {
         </div>
         <h5 className="margin-top-25 margin-bottom-0"><strong>Car Information</strong></h5>
         //@todo - get the car query api database online
-        <div className="row">
+        <div className="row no-border">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6 select-transparent">
             <select className="rq-form-control reverse">
               <option>Car Make</option>
