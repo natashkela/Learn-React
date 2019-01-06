@@ -93,6 +93,14 @@ body {
   margin-top:30px;
 }
 
+.margin-top-40{
+  margin-top:40px;
+}
+
+.margin-top-60{
+  margin-top:60px;
+}
+
 .margin-right-5{
   margin-right:5px!important;
 }
@@ -111,6 +119,10 @@ body {
 
 .black{
   color:black;
+}
+
+.no-border{
+  border:none!important;
 }
 
 .checkout .author-img{
@@ -171,6 +183,10 @@ body {
 .list-your-car-general-info.
 .list-your-car-details{
   min-height:500px;
+}
+
+.list-your-car-container{
+  min-height:900px;
 }
 
 span.more-info{
