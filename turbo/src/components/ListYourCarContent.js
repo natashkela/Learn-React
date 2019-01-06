@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import ListYourCarGeneralInfo from './ListYourCarGeneralInfo';
 import ListYourCarDetails from './ListYourCarDetails';
 import ListYourCarAvailability from './ListYourCarAvailability';
+import ListYourCarPhotos from './ListYourCarPhotos';
 const ListYourCarContent = ({tab}) => {
   return (
     <div>
@@ -14,6 +15,9 @@ const ListYourCarContent = ({tab}) => {
       }
       {tab.uniqueName == "car-availability" &&
         <ListYourCarAvailability />
+      }
+      {tab.uniqueName == "car-photos" &&
+        <ListYourCarPhotos />
       }
     </div>
   );
