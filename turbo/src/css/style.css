@@ -169,6 +169,11 @@ body {
   min-height:500px;
 }
 
+span.more-info{
+  font-weight: 600;
+  color: black;
+}
+
 @media (max-width:767px){
   .list-your-car-general-info .col-xs-12{
     margin-top:10px!important;

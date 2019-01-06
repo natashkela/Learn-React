@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ListYourCarGeneralInfo from './ListYourCarGeneralInfo';
 import ListYourCarDetails from './ListYourCarDetails';
+import ListYourCarAvailability from './ListYourCarAvailability';
 const ListYourCarContent = ({tab}) => {
   return (
     <div>
@@ -10,6 +11,9 @@ const ListYourCarContent = ({tab}) => {
       }
       {tab.uniqueName == "car-details" &&
         <ListYourCarDetails />
+      }
+      {tab.uniqueName == "car-availability" &&
+        <ListYourCarAvailability />
       }
     </div>
   );
