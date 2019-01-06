@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import PropTypes from 'prop-types';
 import ListYourCarContent from './ListYourCarContent';
 class ListYourCarTabContent extends Component{
   state = {
@@ -33,14 +34,7 @@ class ListYourCarTabContent extends Component{
         isActive: false,
         uniqueName:"car-photos"
       }
-    ],
-    isLoggedIn:true,
-    customerInformation:{
-      firstName: "Nata",
-      lastName: "Vacheishvili",
-      phone:"7742320539",
-      phoneCountry:"us"
-    }
+    ]
   }
   handleTabClick(event,name){
     event.preventDefault();
@@ -54,7 +48,7 @@ class ListYourCarTabContent extends Component{
     return (
       <div className="container list-your-car-container">
         <div className="row margin-top-30">
-          <div className="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+          <div className="hidden-xs hidden-sm col-md-3 col-lg-3">
             <div id="elements-menu">
               <ul className="nav nav-stacked rq-elements-menu">
                 {this.state.tabs.map((tab,index)=>
@@ -63,10 +57,27 @@ class ListYourCarTabContent extends Component{
               </ul>
             </div>
           </div>
-          <div className="col-xs-6 col-sm-6 col-md-9 col-lg-9">
+          <div className="list-your-car-xs-navigation margin-bottom-40 col-xs-12 col-sm-12 hidden-md hidden-lg text-center">
+            <div className="btn-group">
+              <button type="button" className="rq-btn rq-btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {this.state.tabs.map((tab,index)=>
+                  tab.isActive ? tab.title : ""
+                )}
+                {this.state.tabs.length > 1 &&
+                  <span className="margin-left-5 caret"></span>
+                }
+              </button>
+              <div className="dropdown-menu">
+                {this.state.tabs.map((tab,index)=>
+                  <a className={tab.isActive ? "dropdown-item active" : "dropdown-item"} onClick={(event) => this.handleTabClick(event,tab.uniqueName)} key={index} href={"#"+tab.uniqueName}>{tab.title}</a>
+                )}
+              </div>
+            </div>
+          </div>
+          <div className="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             {this.state.tabs.map((tab,index)=>
               <div key={index} id={tab.uniqueName} className={tab.isActive ? "active" : "hidden"}>
-                <ListYourCarContent tab={tab} isLoggedIn={this.state.isLoggedIn} customerInformation={this.state.customerInformation}/>
+                <ListYourCarContent tab={tab} isLoggedIn={this.props.isLoggedIn} customerInformation={this.props.customerInformation}/>
               </div>
             )}
           </div>
@@ -74,5 +85,9 @@ class ListYourCarTabContent extends Component{
       </div>
     );
   }
+}
+ListYourCarTabContent.propTypes = {
+  isLoggedIn: PropTypes.bool,
+  customerInformation: PropTypes.object
 }
 export default ListYourCarTabContent;

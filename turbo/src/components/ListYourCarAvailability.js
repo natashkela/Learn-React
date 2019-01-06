@@ -10,7 +10,7 @@ const ListYourCarAvailability = () => {
             <option>Advance Notice</option>
           </select>
         </div>
-        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div className="information-box col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <span className="more-info">Advance Notice</span>
           <p>Blocks trips that don't give you enough advance notice</p>
         </div>
@@ -22,9 +22,9 @@ const ListYourCarAvailability = () => {
             <option>Minimum Duration</option>
           </select>
         </div>
-        <div className="margin-top-60 col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div className="information-box margin-top-60 col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <span className="more-info">Shortest Possible Trip</span>
-          <p>Shortest possible amount of time people should rent your car</p>
+          <p>Shortest possible amount of time travelers should request your car</p>
         </div>
       </div>
       <div className="row margin-top-15 ">
@@ -33,9 +33,9 @@ const ListYourCarAvailability = () => {
             <option>Maximum Duration</option>
           </select>
         </div>
-        <div className="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div className="information-box col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <span className="more-info">Longest Possible Trip</span>
-          <p>Longest possible amount of time people should rent your car</p>
+          <p>Longest possible amount of time travelers should request your car</p>
         </div>
       </div>
     </div>
