@@ -22,7 +22,7 @@ const MyProfile = ({profile,errorLog, profileFirstNameChange, profileLastNameCha
           <form>
             <div className="col-xs-12 col-sm-12 col-lg-12 col-md-12">
               <div>
-                <img src={profile.id && profile.username ? require("../img/users/"+profile.id+"-"+profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"100px",height:"100px", borderRadius:"50%"}} className=" margin-top-15 img-responsive" />
+                <img src={profile.id && profile.username ? require("../img/users/"+profile.id+"-"+profile.username+".jpg") : require("../img/users/avatar.jpg")} style={{width:"100px",height:"100px", borderRadius:"50%"}} className=" margin-top-15" />
                 <button className="margin-left-60 rq-btn rq-btn-secondary">Upload Photo </button>
                 <p className="margin-top-10">Adding a photo helps hosts recognize each other when picking the car up</p>
               </div>

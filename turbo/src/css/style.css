@@ -235,6 +235,32 @@ span.more-info{
   background-color:#efa80f;
 }
 
+.pricing-daily-dollar{
+  width:50px;
+  font-weight:bold;
+  background-color:#efa80f;
+  border-color:#efa80f;
+}
+
+.pricing .p{
+  margin-top:10px;
+}
+
+.pricing-daily{
+  padding:25px;
+  border-radius:0;
+}
+
+.pricing-daily:focus{
+  border-color:black;
+  box-shadow:none;
+}
+
+.default-price-section{
+  padding-bottom:40px;
+  border-bottom:1px solid #ccc;
+}
+
 @media (max-width:767px){
   .list-your-car-general-info .col-xs-12{
     margin-top:10px!important;

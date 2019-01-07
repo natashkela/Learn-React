@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Pricing from './Pricing';
 import MyProfile from './MyProfile';
 const ProfileContent = ({tab, profile, errorLog, profileEmailChange, profilePasswordChange,
                     profileRePasswordChange, profileSelectedCountryChange,
@@ -20,6 +21,9 @@ const ProfileContent = ({tab, profile, errorLog, profileEmailChange, profilePass
             profileSelectedCityChange={profileSelectedCityChange}
             profileDriversLicenseChange={profileDriversLicenseChange}
             profileAboutMeChange= {profileAboutMeChange} />
+      }
+      {tab.uniqueName == "pricing" &&
+        <Pricing />
       }
     </div>
   );
