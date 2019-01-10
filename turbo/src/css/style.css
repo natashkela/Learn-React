@@ -193,7 +193,8 @@ body {
   min-height:500px;
 }
 
-.list-your-car-container{
+.list-your-car-container,
+.profile-container{
   min-height:900px;
 }
 
@@ -261,6 +262,11 @@ span.more-info{
   border-bottom:1px solid #ccc;
 }
 
+.airport-pickup-price .pricing-daily{
+  width:180px;
+}
+
+
 @media (max-width:767px){
   .list-your-car-general-info .col-xs-12{
     margin-top:10px!important;
@@ -282,6 +288,10 @@ span.more-info{
 
   .information-box{
     margin-top:20px;
+  }
+
+  .airport-pickup-price{
+    margin-top:13px;
   }
 
 }

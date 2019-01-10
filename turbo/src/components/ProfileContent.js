@@ -2,12 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Pricing from './Pricing';
 import MyProfile from './MyProfile';
+import AirportDelivery from './AirportDelivery';
 const ProfileContent = ({tab, profile, errorLog, profileEmailChange, profilePasswordChange,
                     profileRePasswordChange, profileSelectedCountryChange,
                     profileSelectedCityChange, profileDriversLicenseChange,
                     profileAboutMeChange, profileFirstNameChange, profileLastNameChange}) => {
   return (
-    <div>
+    <div className="profile-container">
       {tab.uniqueName == "profile" &&
         <MyProfile
             profile={profile}
@@ -24,6 +25,9 @@ const ProfileContent = ({tab, profile, errorLog, profileEmailChange, profilePass
       }
       {tab.uniqueName == "pricing" &&
         <Pricing />
+      }
+      {tab.uniqueName == "car-delivery" &&
+        <AirportDelivery />
       }
     </div>
   );
