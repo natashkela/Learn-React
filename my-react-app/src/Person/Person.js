@@ -2,12 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 const Person = (props) => {
     return (
-        <p>
-            Ras shvebi aba ? Me {props.year} wlis var exla
-        </p>
+        <div>
+            <p>
+                Me var {props.name} da var {props.age} wlis
+            </p>
+            <p>
+                {props.children}
+            </p>
+        </div>
     );
 };
 Person.propTypes = {
-    year: PropTypes.number
+    name: PropTypes.string,
+    age: PropTypes.number
 };
-export default Person; 
+export default Person;
