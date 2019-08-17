@@ -41,45 +41,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="54" column="113" lean-forward="true" selection-start-line="54" selection-start-column="113" selection-end-line="54" selection-end-column="113" />
+            <state relative-caret-position="469">
+              <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
                 <element signature="e#342#612#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserInput/UserInput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="15" column="25" lean-forward="true" selection-end-line="15" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserOutput/UserOutput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="9" column="6" lean-forward="true" selection-end-line="16" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserOutput/UserOutput.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="5" column="1" lean-forward="true" selection-end-line="5" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -136,12 +103,6 @@
               <item name="my-react-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="my-react-app" type="b2602c69:ProjectViewProjectNode" />
-              <item name="my-react-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="UserOutput" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -180,12 +141,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1565824409666</updated>
-      <workItem from="1565824410820" duration="6243000" />
+      <workItem from="1565824410820" duration="6326000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6243000" />
+    <option name="totallyTimeSpent" value="6326000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="23" width="1420" height="857" extended-state="0" />
@@ -261,8 +222,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="54" column="113" lean-forward="true" selection-start-line="54" selection-start-column="113" selection-end-line="54" selection-end-column="113" />
+        <state relative-caret-position="469">
+          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
             <element signature="e#342#612#0" />
