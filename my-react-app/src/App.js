@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import Person from './Person/Person';
+import ValidationComponent from './Validation/ValidationComponent.js';
+import CharComponent from "./CharComponent/CharComponent";
 class App extends Component {
     state = {
         persons: [
@@ -10,7 +12,8 @@ class App extends Component {
         ],
         otherState: 'some other value',
         username: 'nvacheishvili',
-        showPersons:false
+        showPersons:false,
+        enteredText : ''
     };
 
     deletePersonHandler = (index) => {
@@ -38,6 +41,17 @@ class App extends Component {
         this.setState({showPersons: !doesShow});
     };
 
+    textLengthHandler = (event) => {
+        this.setState({enteredText: event.target.value});
+    };
+
+    textCharHandler = (index) => {
+        let text = this.state.enteredText.split('');
+        text.splice(index,1)
+        text = text.join('');
+        this.setState({enteredText: text})
+    };
+
     render () {
         const style={
             backgroundColor: 'white',
@@ -59,12 +73,27 @@ class App extends Component {
             );
         }
 
+        let charComponents = (
+            <div>
+                {this.state.enteredText.split("").map( (c, index) => {
+                        return <CharComponent character={c} delete={() => this.textCharHandler(index)}/>
+                })}
+            </div>
+        );
+
+        let textLength = this.state.enteredText.length;
         return (
             <div className="App">
                 <h1>Hi, I'm a React App</h1>
                 <p>This is really working!</p>
                 <button style={style} onClick={this.togglePersonHandler}>Switch Name</button>
                 {persons}
+                <div>
+                    <input type="text" onChange={(event) => this.textLengthHandler(event)}/>
+                    <p>{textLength}</p>
+                    <ValidationComponent textLength={textLength} />
+                    {charComponents}
+                </div>
             </div>
         );
         // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
